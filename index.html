@@ -1,119 +1,1303 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Decano Ciencias y Tecnología</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0a1f6b">
+<title>Vidal Decano · FCyT USFX</title>
+<meta name="description" content="Ing. Vidal López Gonzales, candidato a Decano de la Facultad de Ciencias y Tecnología USFX. Gestión 2026–2030. El cambio se demuestra con hechos: conoce sus propuestas.">
+<meta property="og:title" content="VIDAL DECANO · El cambio se demuestra con hechos">
+<meta property="og:description" content="Facultad de Ciencias y Tecnología · Una transformación real · Gestión 2026–2030. Elige tu carrera, mira las propuestas y juega.">
+<meta property="og:image" content="assets/img/afiche.webp">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a1f6b'/%3E%3Cpath d='M12 14h12l8 24 10-24h10L37 52H27z' fill='%2319c2ff'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,800;1,900&family=Inter:wght@400;500;600;700;800&family=Kaushan+Script&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/vidal.webp">
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+
 <style>
-:root{--bg:#f6f7f9;--card:#fff;--tx:#1b1f24;--mut:#5d6672;--ln:#e2e5ea;--ac:#0b5cad;--acs:#e6f0fb;--ok:#18794e;--wr:#a35200;--wrs:#fff3e0}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111418;--card:#1a1f25;--tx:#e8eaed;--mut:#9aa3ad;--ln:#2c333b;--ac:#6aa8ff;--acs:#1a2a3f;--ok:#4cc38a;--wr:#ffb36b;--wrs:#33261a}}
-:root[data-theme="dark"]{--bg:#111418;--card:#1a1f25;--tx:#e8eaed;--mut:#9aa3ad;--ln:#2c333b;--ac:#6aa8ff;--acs:#1a2a3f;--ok:#4cc38a;--wr:#ffb36b;--wrs:#33261a}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-header{padding:20px 16px 8px;max-width:1100px;margin:auto}
-h1{margin:0;font-size:22px}
-.sub{color:var(--mut);margin:4px 0 0}
-.reserva{display:inline-block;margin-top:8px;background:var(--wrs);color:var(--wr);padding:3px 10px;border-radius:99px;font-size:13px;font-weight:600}
-main{max-width:1100px;margin:auto;padding:0 16px 40px}
-nav{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0;position:sticky;top:0;background:var(--bg);padding:8px 0;z-index:2}
-nav button{border:1px solid var(--ln);background:var(--card);color:var(--tx);padding:8px 14px;border-radius:99px;font:inherit;cursor:pointer}
-nav button[aria-selected="true"]{background:var(--ac);border-color:var(--ac);color:#fff}
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
-.kpi{background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:12px 14px}
-.kpi b{display:block;font-size:26px;font-variant-numeric:tabular-nums}
-.kpi span{color:var(--mut);font-size:13px}
-.card{background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:14px;margin:12px 0}
-h2{font-size:17px;margin:20px 0 6px}
-.mut{color:var(--mut)}
-.tabla{width:100%;border-collapse:collapse;font-size:14px}
-.tabla th,.tabla td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--ln);vertical-align:top}
-.tabla th{font-size:12px;text-transform:uppercase;letter-spacing:.03em;color:var(--mut);position:sticky;top:52px;background:var(--card)}
-.num{text-align:right!important;font-variant-numeric:tabular-nums}
-.scroll{overflow-x:auto}
-.mesa-n{font-weight:700;font-size:18px;color:var(--ac)}
-.chip{display:inline-block;padding:1px 8px;border-radius:99px;background:var(--acs);color:var(--ac);font-size:12px;margin:1px 2px 1px 0;white-space:nowrap}
-.chip.wr{background:var(--wrs);color:var(--wr)}
-.filtros{display:grid;grid-template-columns:2fr 1fr 1fr 90px;gap:8px}
-@media (max-width:640px){.filtros{grid-template-columns:1fr 1fr}.filtros input{grid-column:1/-1}}
-input,select{font:inherit;padding:9px 10px;border:1px solid var(--ln);border-radius:8px;background:var(--card);color:var(--tx);width:100%}
-.letras{display:flex;flex-wrap:wrap;gap:4px;margin:10px 0}
-.letras button{min-width:32px;padding:5px 0;border:1px solid var(--ln);background:var(--card);color:var(--tx);border-radius:6px;cursor:pointer;font:inherit;font-size:13px}
-.letras button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
-.barra{height:8px;background:var(--acs);border-radius:4px;overflow:hidden;min-width:60px}
-.barra i{display:block;height:100%;background:var(--ac)}
-.nota{font-size:13px;color:var(--mut)}
-[hidden]{display:none!important}
-ul.obs{padding-left:18px}ul.obs li{margin:6px 0}
+:root{
+  --sky:#eaf5ff;
+  --sky2:#cfe7ff;
+  --sky3:#a9d6ff;
+  --navy:#0a1f6b;
+  --navy2:#06134a;
+  --navy3:#030b30;
+  --blue:#1450e6;
+  --blue2:#2f7bff;
+  --cyan:#19c2ff;
+  --red:#e4232d;
+  --red2:#ff4a52;
+  --ink:#0b1b55;
+  --muted:#4d63a3;
+  --white:#fff;
+  --line:rgba(10,31,107,.12);
+  --radius:22px;
+  --shadow:0 24px 60px rgba(10,31,107,.18);
+  --safe-b:env(safe-area-inset-bottom,0px);
+  --c-acad:#1450e6;
+  --c-infra:#e4232d;
+  --c-vida:#0aa6d8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:78px}
+body{
+  background:var(--sky);color:var(--ink);
+  font-family:Inter,system-ui,sans-serif;line-height:1.55;
+  overflow-x:hidden;-webkit-tap-highlight-color:transparent;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+.wrap{width:min(1220px,100%);margin:auto;padding:0 clamp(16px,4vw,40px)}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;border-radius:8px}
+.script{font-family:"Kaushan Script",cursive;color:var(--red);font-weight:400;text-transform:none}
+
+/* ---------- progress ---------- */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:200;background:linear-gradient(90deg,var(--cyan),var(--blue),var(--red))}
+
+/* ---------- loader ---------- */
+#loader{position:fixed;inset:0;z-index:9999;background:var(--navy2);display:grid;place-items:center;transition:opacity .6s,visibility .6s}
+#loader.hide{opacity:0;visibility:hidden}
+.urn{position:relative;width:110px;height:120px}
+.urn .box{position:absolute;bottom:0;left:0;right:0;height:72px;border:5px solid #fff;border-radius:8px}
+.urn .box:before{content:"";position:absolute;left:22px;right:22px;top:-5px;height:6px;background:var(--navy2)}
+.urn .paper{position:absolute;left:34px;width:42px;height:54px;background:var(--cyan);border-radius:4px;animation:drop 1.1s cubic-bezier(.5,0,.7,1) infinite;transform-origin:center}
+.urn .paper:after{content:"V";position:absolute;inset:0;display:grid;place-items:center;font:900 italic 26px Poppins;color:var(--navy2)}
+@keyframes drop{0%{top:-30px;opacity:0}20%{opacity:1}70%{top:44px;opacity:1}100%{top:60px;opacity:0}}
+#loader p{margin-top:22px;color:#cfe7ff;font:700 12px Inter;letter-spacing:3px;text-transform:uppercase;text-align:center}
+
+/* ---------- nav ---------- */
+.topbar{
+  position:fixed;inset:0 0 auto 0;z-index:100;height:68px;display:flex;align-items:center;
+  background:rgba(234,245,255,.78);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);transition:background .3s,box-shadow .3s;
+}
+.topbar.scrolled{background:rgba(255,255,255,.92);box-shadow:0 8px 30px rgba(10,31,107,.08)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:10px}
+.vmark{
+  width:40px;height:40px;border-radius:11px;display:grid;place-items:center;flex:none;
+  background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;
+  font:900 italic 24px Poppins;box-shadow:4px 4px 0 var(--cyan);
+}
+.logo b{display:block;font:900 italic 16px Poppins;line-height:1;color:var(--navy);letter-spacing:.3px}
+.logo small{display:block;font-size:10px;color:var(--muted);letter-spacing:1.5px;font-weight:700;text-transform:uppercase;line-height:1.4}
+.nav-links{display:flex;gap:2px;align-items:center}
+.nav-links a{font-size:13px;font-weight:700;color:var(--muted);padding:9px 12px;border-radius:10px;transition:.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--navy);background:rgba(20,80,230,.08)}
+.nav-links a.btn-wa{background:#1fae54;color:#fff;margin-left:6px}
+.nav-links a.btn-wa:hover{background:#17964a;color:#fff}
+.btn-wa svg{width:16px;height:16px}
+
+.bottombar{display:none}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:50px;padding:0 22px;border-radius:14px;font-weight:800;font-size:14px;
+  transition:transform .2s,box-shadow .2s,background .2s;white-space:nowrap;
+}
+.btn svg{width:18px;height:18px}
+.btn-primary{background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;box-shadow:0 12px 30px rgba(20,80,230,.35)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(20,80,230,.45)}
+.btn-red{background:linear-gradient(135deg,var(--red),var(--red2));color:#fff;box-shadow:0 12px 30px rgba(228,35,45,.32)}
+.btn-red:hover{transform:translateY(-3px)}
+.btn-white{background:#fff;color:var(--navy);box-shadow:0 8px 24px rgba(10,31,107,.12)}
+.btn-white:hover{transform:translateY(-3px)}
+.btn-ghost{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.16)}
+.btn-wa-big{background:#1fae54;color:#fff;box-shadow:0 12px 30px rgba(31,174,84,.35)}
+.btn-wa-big:hover{transform:translateY(-3px)}
+.btn-sm{min-height:40px;padding:0 15px;font-size:13px;border-radius:11px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;padding:96px 0 0;overflow:hidden;
+  background:
+    radial-gradient(60% 50% at 80% 30%,rgba(255,255,255,.9),transparent 70%),
+    radial-gradient(50% 40% at 15% 80%,rgba(255,255,255,.7),transparent 70%),
+    linear-gradient(180deg,#bfe2ff 0%,#e3f2ff 55%,var(--sky) 100%)}
+#hexbg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.cloud{position:absolute;border-radius:50%;background:#fff;filter:blur(30px);opacity:.75;pointer-events:none;animation:float 14s ease-in-out infinite alternate}
+@keyframes float{to{transform:translate(40px,-18px)}}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:30px;align-items:center;min-height:calc(100svh - 150px)}
+.areas{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.areas span{display:inline-flex;align-items:center;gap:6px;background:var(--navy);color:#fff;font:800 12px Inter;padding:7px 12px;border-radius:999px}
+.areas span svg{width:14px;height:14px;color:var(--cyan)}
+.claim{font-family:Poppins;line-height:.95;letter-spacing:-1px;color:var(--navy)}
+.claim .l1{display:block;font-weight:500;font-size:clamp(34px,5.4vw,66px)}
+.claim .l2{display:block;font-weight:900;font-size:clamp(40px,6.6vw,82px);color:var(--blue)}
+.claim .l3{display:flex;align-items:baseline;gap:6px;font-weight:900;font-size:clamp(46px,7.6vw,96px);background:linear-gradient(90deg,var(--blue2),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.claim .l3 .script{font-size:.62em;-webkit-text-fill-color:var(--red);transform:rotate(-8deg) translateY(-.1em);display:inline-block}
+.word{display:inline-block;opacity:0;transform:translateY(30px) rotate(3deg);animation:wordin .8s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes wordin{to{opacity:1;transform:none}}
+
+.vbanner{position:relative;margin:26px 0 8px;display:inline-flex;flex-direction:column;align-items:flex-start;gap:6px;transform:skewX(-12deg)}
+.vbanner span{display:block;font:900 italic clamp(30px,4.4vw,52px)/1 Poppins;color:#fff;padding:8px 22px 10px;letter-spacing:.5px}
+.vbanner .a{background:linear-gradient(90deg,var(--navy),var(--blue));box-shadow:8px 8px 0 var(--cyan)}
+.vbanner .b{background:linear-gradient(90deg,var(--blue),var(--cyan));margin-left:34px;box-shadow:8px 8px 0 var(--navy)}
+.vbanner span i{display:inline-block;transform:skewX(12deg);font-style:normal}
+.who{margin-top:18px;font-size:15px;color:var(--muted);max-width:520px}
+.who b{color:var(--navy)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+
+/* papeleta */
+.ballot{margin-top:28px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.paper{display:flex;background:#fff;border:2px solid #c8d2ea;border-radius:10px;padding:6px;gap:6px;box-shadow:0 14px 34px rgba(10,31,107,.15);transform:rotate(-2deg)}
+.slot{width:66px;display:flex;flex-direction:column;align-items:center;gap:5px;background:#eef1f8;border-radius:6px;padding:6px 4px}
+.slot .ph{width:52px;height:56px;border-radius:4px;background:#d8dded;display:grid;place-items:center;color:#a1abc8;overflow:hidden}
+.slot .ph svg{width:26px;height:26px}
+.slot.me .ph{background:var(--red)}
+.slot.me .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+.slot small{font-size:7px;font-weight:800;color:#56607d;text-align:center;line-height:1.1;min-height:16px}
+.chk{width:38px;height:38px;border:2.5px solid #56607d;border-radius:5px;background:#fff;position:relative}
+.slot.me .chk{cursor:pointer;animation:hint 1.6s ease-in-out infinite}
+@keyframes hint{50%{box-shadow:0 0 0 7px rgba(25,194,255,.35)}}
+.chk svg{position:absolute;inset:-6px -4px auto auto;width:44px;height:44px;overflow:visible}
+.chk path{fill:none;stroke:var(--red);stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:60;stroke-dashoffset:60;transition:stroke-dashoffset .5s ease}
+.chk.on{animation:none}
+.chk.on path{stroke-dashoffset:0}
+.ballot-hint{font-weight:800;color:var(--navy);font-size:14px;max-width:180px;line-height:1.3}
+.ballot-hint span{display:block;font-weight:500;color:var(--muted);font-size:12px}
+
+/* portrait */
+.portrait{position:relative;justify-self:center;width:min(440px,100%);aspect-ratio:490/740}
+.portrait .frame{position:absolute;inset:0;clip-path:polygon(14% 0,100% 0,100% 100%,0 100%,0 9%);border-radius:0 0 30px 30px;overflow:hidden;box-shadow:var(--shadow);background:#bfe2ff}
+.portrait .frame img{width:100%;height:100%;object-fit:cover;transform:scale(1.04);transition:transform 6s ease}
+.portrait:hover .frame img{transform:scale(1.09)}
+.portrait .stripe{position:absolute;right:-22px;top:30px;width:60px;height:62%;background:repeating-linear-gradient(180deg,var(--navy) 0 8px,transparent 8px 16px);z-index:-1;opacity:.9}
+.portrait .vback{position:absolute;left:-60px;bottom:40px;font:900 italic 360px/1 Poppins;color:var(--blue);opacity:.12;z-index:-1;pointer-events:none}
+.badge{position:absolute;background:#fff;border-radius:16px;padding:10px 14px;box-shadow:0 14px 34px rgba(10,31,107,.18);display:flex;align-items:center;gap:10px;animation:bob 4s ease-in-out infinite}
+.badge b{display:block;font:900 26px/1 Poppins;color:var(--navy)}
+.badge small{display:block;font-size:11px;font-weight:700;color:var(--muted);line-height:1.2}
+.badge .ic{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;color:#fff;flex:none}
+.badge .ic svg{width:20px;height:20px}
+.badge.b1{left:-34px;top:18%}
+.badge.b2{right:-18px;top:52%;animation-delay:-1.3s}
+.badge.b3{left:-10px;bottom:7%;animation-delay:-2.6s}
+@keyframes bob{50%{transform:translateY(-10px)}}
+.gestion{position:absolute;right:14px;bottom:14px;background:var(--navy);color:#fff;font:800 12px Inter;padding:6px 12px;border-radius:999px;letter-spacing:.6px}
+
+/* ticker */
+.ticker{position:relative;margin-top:34px;background:var(--navy);color:#fff;overflow:hidden;transform:skewY(-1.2deg);border-top:4px solid var(--cyan);border-bottom:4px solid var(--red)}
+.ticker .track{display:flex;width:max-content;animation:marquee 45s linear infinite;padding:14px 0}
+.ticker span{display:inline-flex;align-items:center;gap:12px;padding:0 22px;font:800 italic 15px Poppins;text-transform:uppercase;white-space:nowrap;letter-spacing:.4px}
+.ticker span:before{content:"";width:9px;height:9px;background:var(--cyan);transform:rotate(45deg)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* ---------- section base ---------- */
+.sec{position:relative;padding:clamp(70px,9vw,120px) 0}
+.sec.white{background:#fff}
+.sec.dark{background:radial-gradient(90% 70% at 50% 0%,#14308f 0%,var(--navy2) 60%,var(--navy3) 100%);color:#fff}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:38px}
+.kicker{display:inline-flex;align-items:center;gap:8px;font:800 12px Inter;letter-spacing:2.4px;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.kicker:before{content:"";width:26px;height:3px;background:var(--red);border-radius:2px}
+.dark .kicker{color:var(--cyan)}
+.sec-title{font:900 clamp(32px,5vw,56px)/1 Poppins;letter-spacing:-1px;color:var(--navy)}
+.sec-title .c{color:var(--blue)}
+.sec-title .r{color:var(--red)}
+.dark .sec-title{color:#fff}
+.dark .sec-title .c{color:var(--cyan)}
+.sec-sub{max-width:480px;color:var(--muted);font-size:16px}
+.dark .sec-sub{color:#b9cbf5}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- carreras ---------- */
+.areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.area{background:var(--sky);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.area h3{display:flex;align-items:center;gap:10px;font:800 17px Poppins;color:var(--navy);margin-bottom:14px}
+.area h3 em{font-style:normal;margin-left:auto;font:800 12px Inter;color:var(--muted);background:#fff;border-radius:999px;padding:3px 10px}
+.area h3 .ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:var(--navy);color:var(--cyan)}
+.area h3 .ic svg{width:18px;height:18px}
+.car-list{display:flex;flex-direction:column;gap:8px}
+.car{display:flex;align-items:center;gap:12px;text-align:left;background:#fff;border:2px solid transparent;border-radius:14px;padding:10px 12px;font-weight:700;font-size:14px;color:var(--ink);transition:transform .2s,border-color .2s,box-shadow .2s}
+.car:hover{transform:translateX(4px);border-color:var(--sky3)}
+.car .ci{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:var(--sky2);color:var(--blue);flex:none;transition:.2s}
+.car .ci svg{width:18px;height:18px}
+.car.on{border-color:var(--blue);box-shadow:0 10px 26px rgba(20,80,230,.2)}
+.car.on .ci{background:var(--blue);color:#fff}
+.car .tick{margin-left:auto;width:20px;height:20px;border-radius:50%;border:2px solid #c6d4f2;flex:none;display:grid;place-items:center}
+.car.on .tick{background:var(--red);border-color:var(--red)}
+.car.on .tick:after{content:"";width:8px;height:5px;border:2.5px solid #fff;border-top:0;border-right:0;transform:rotate(-45deg) translate(1px,-1px)}
+
+.foryou{margin-top:30px;display:none;border-radius:26px;overflow:hidden;background:linear-gradient(120deg,var(--navy) 0%,var(--blue) 70%,var(--cyan) 130%);color:#fff;box-shadow:var(--shadow)}
+.foryou.show{display:grid;grid-template-columns:1fr 1.3fr;animation:pop .6s cubic-bezier(.2,1.4,.4,1)}
+@keyframes pop{from{transform:scale(.94);opacity:0}}
+.foryou .l{padding:30px}
+.foryou .hi{font:900 clamp(24px,3vw,34px)/1.1 Poppins}
+.foryou .hi .script{color:#ffd5d7}
+.foryou p{color:#d5e3ff;margin-top:10px;font-size:15px}
+.foryou .r{padding:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;background:rgba(255,255,255,.06)}
+.fy-card{background:#fff;color:var(--ink);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;text-align:left;transition:transform .25s}
+.fy-card:hover{transform:translateY(-5px) rotate(-1deg)}
+.fy-card img{aspect-ratio:1;object-fit:cover}
+.fy-card div{padding:10px 12px 12px}
+.fy-card small{font:800 11px Inter;color:var(--red);letter-spacing:1px}
+.fy-card b{display:block;font:800 13px/1.25 Poppins;color:var(--navy)}
+
+/* ---------- propuestas ---------- */
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:7px;padding:9px 15px;border-radius:999px;font-weight:800;font-size:13px;background:#fff;color:var(--muted);border:1px solid var(--line);transition:.2s}
+.chip:hover{color:var(--navy)}
+.chip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.chip i{font-style:normal;background:rgba(10,31,107,.08);border-radius:999px;padding:0 7px;font-size:11px}
+.chip.on i{background:rgba(255,255,255,.18)}
+.props{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:20px}
+.prop{position:relative;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 30px rgba(10,31,107,.08);border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.prop:hover{transform:translateY(-6px);box-shadow:0 22px 50px rgba(10,31,107,.16)}
+.prop .thumb{position:relative;aspect-ratio:16/10;overflow:hidden;cursor:pointer;background:var(--sky2)}
+.prop .thumb img{width:100%;height:100%;object-fit:cover;object-position:50% 72%;transition:transform .6s}
+.prop:hover .thumb img{transform:scale(1.07)}
+.prop .num{position:absolute;left:12px;top:10px;font:900 italic 44px/1 Poppins;color:#fff;text-shadow:0 4px 18px rgba(3,11,48,.55)}
+.prop .play{position:absolute;right:12px;bottom:12px;display:flex;align-items:center;gap:6px;background:rgba(3,11,48,.7);color:#fff;font:800 11px Inter;padding:6px 10px;border-radius:999px;backdrop-filter:blur(6px)}
+.prop .play svg{width:13px;height:13px}
+.prop .foryou-tag{position:absolute;right:12px;top:12px;background:var(--red);color:#fff;font:800 11px Inter;padding:5px 10px;border-radius:999px;display:none;align-items:center;gap:5px;box-shadow:0 6px 16px rgba(228,35,45,.4)}
+.prop.mine .foryou-tag{display:inline-flex}
+.prop.mine{border:2px solid var(--red)}
+.prop .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.cat{display:inline-flex;align-items:center;gap:6px;font:800 11px Inter;letter-spacing:1.2px;text-transform:uppercase}
+.cat:before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.prop h3{font:800 18px/1.2 Poppins;color:var(--navy)}
+.prop p{font-size:14px;color:var(--muted);flex:1}
+.prop .acts{display:flex;gap:8px;margin-top:6px}
+.heart{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:11px;font-weight:800;font-size:13px;background:var(--sky);color:var(--navy);transition:.2s}
+.heart svg{width:16px;height:16px;transition:transform .3s}
+.heart.on{background:#ffe5e6;color:var(--red)}
+.heart.on svg{fill:var(--red);transform:scale(1.2)}
+.heart:active svg{transform:scale(.8)}
+.more-props{margin-top:30px;text-align:center;color:var(--muted);font-weight:600;font-size:14px}
+
+/* ---------- stories ---------- */
+#stories{position:fixed;inset:0;z-index:500;background:rgba(3,11,48,.96);display:none;align-items:center;justify-content:center;flex-direction:column}
+#stories.open{display:flex}
+.st-wrap{position:relative;width:min(560px,100vw);height:min(100svh,920px);display:flex;flex-direction:column;padding:12px 12px calc(12px + var(--safe-b))}
+.st-bars{display:flex;gap:4px;margin-bottom:10px}
+.st-bars span{flex:1;height:3px;background:rgba(255,255,255,.25);border-radius:3px;overflow:hidden}
+.st-bars span i{display:block;height:100%;width:0;background:#fff}
+.st-top{display:flex;align-items:center;gap:10px;color:#fff;margin-bottom:10px}
+.st-top .vmark{width:34px;height:34px;font-size:19px;border-radius:9px;box-shadow:3px 3px 0 var(--cyan)}
+.st-top b{font:800 14px Poppins;display:block;line-height:1.1}
+.st-top small{font-size:11px;color:#9fb4ea}
+.st-top .x{margin-left:auto;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.1)}
+.st-img{position:relative;flex:1;min-height:0;display:grid;place-items:center;user-select:none;-webkit-user-select:none}
+.st-img img{max-width:100%;max-height:100%;border-radius:18px;box-shadow:0 30px 80px rgba(0,0,0,.5);pointer-events:none;animation:stin .45s cubic-bezier(.2,.8,.2,1)}
+@keyframes stin{from{opacity:0;transform:scale(.96)}}
+.st-tap{position:absolute;top:0;bottom:0;width:35%;z-index:2}
+.st-tap.l{left:0}.st-tap.r{right:0}
+.st-cap{color:#fff;margin-top:12px}
+.st-cap h4{font:800 18px/1.2 Poppins}
+.st-cap p{color:#b9cbf5;font-size:13px;margin-top:4px}
+.st-acts{display:flex;gap:8px;margin-top:12px}
+.st-acts .heart{background:rgba(255,255,255,.1);color:#fff}
+.st-acts .heart.on{background:var(--red);color:#fff}
+.st-acts .heart.on svg{fill:#fff}
+.st-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;display:grid;place-items:center;z-index:3}
+.st-nav.p{left:-64px}.st-nav.n{right:-64px}
+
+/* ---------- facultad ---------- */
+.fac{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:stretch}
+.fac-photo{position:relative;border-radius:28px;overflow:hidden;min-height:420px;box-shadow:var(--shadow)}
+.fac-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.fac-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(3,11,48,.85))}
+.fac-photo .cap{position:absolute;left:24px;right:24px;bottom:22px;z-index:2;color:#fff}
+.fac-photo .cap h3{font:900 clamp(24px,3vw,34px)/1.05 Poppins}
+.fac-photo .cap p{color:#cfe0ff;font-size:14px;margin-top:6px;max-width:460px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.stat{background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:12px}
+.stat b{display:block;font:900 32px/1 Poppins}
+.stat small{font-size:12px;color:#cfe0ff;font-weight:600}
+.lego{position:relative;border-radius:28px;overflow:hidden;background:linear-gradient(180deg,#fff3e0,#ffe2c2);box-shadow:var(--shadow);display:flex;flex-direction:column}
+.lego img{width:100%;flex:1;min-height:0;object-fit:cover;object-position:50% 30%}
+.lego .bub{position:absolute;left:16px;right:16px;top:16px;background:#fff;border-radius:18px;padding:12px 14px;font-weight:700;font-size:14px;color:var(--navy);box-shadow:0 12px 30px rgba(10,31,107,.18)}
+.lego .bub:after{content:"";position:absolute;left:50%;bottom:-9px;width:18px;height:18px;background:#fff;transform:rotate(45deg)}
+.lego .bub b{font-family:Poppins;color:var(--blue)}
+
+/* ---------- juego ---------- */
+.game-box{position:relative;border-radius:28px;overflow:hidden;background:linear-gradient(180deg,#14308f,#081a5c);border:1px solid rgba(255,255,255,.12);box-shadow:0 30px 80px rgba(0,0,0,.4);touch-action:none}
+#gcv{display:block;width:100%;height:min(560px,68svh)}
+.g-hud{position:absolute;left:0;right:0;top:0;display:flex;justify-content:space-between;align-items:center;padding:14px 16px;pointer-events:none;font:800 14px Inter}
+.g-hud .pill{background:rgba(3,11,48,.55);backdrop-filter:blur(6px);padding:7px 12px;border-radius:999px;display:flex;align-items:center;gap:6px}
+.g-hud .pill b{font:900 18px Poppins;color:var(--cyan)}
+.g-over{position:absolute;inset:0;display:grid;place-items:center;text-align:center;background:rgba(3,11,48,.72);backdrop-filter:blur(4px);padding:20px}
+.g-over.hide{display:none}
+.g-over h3{font:900 clamp(28px,4vw,44px)/1 Poppins}
+.g-over h3 .c{color:var(--cyan)}
+.g-over p{color:#b9cbf5;max-width:420px;margin:12px auto 18px;font-size:15px}
+.g-legend{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:20px}
+.g-legend span{background:rgba(255,255,255,.08);border-radius:999px;padding:6px 11px;font-size:12px;font-weight:700}
+.g-legend span.bad{background:rgba(228,35,45,.25)}
+.g-score{font:900 72px/1 Poppins;color:var(--cyan)}
+.g-rank{display:inline-block;margin-top:8px;background:var(--red);padding:6px 14px;border-radius:999px;font:800 14px Inter}
+.g-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+
+/* ---------- top3 ---------- */
+.top3{display:grid;grid-template-columns:1fr 340px;gap:40px;align-items:start}
+.pick{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:20px 0}
+.pk{display:flex;align-items:center;gap:10px;text-align:left;background:var(--sky);border:2px solid transparent;border-radius:14px;padding:10px 12px;font-weight:700;font-size:13px;line-height:1.25;transition:.2s}
+.pk:hover{border-color:var(--sky3)}
+.pk .n{font:900 italic 18px Poppins;color:var(--blue);width:28px;flex:none}
+.pk .o{margin-left:auto;width:26px;height:26px;border-radius:50%;background:#fff;display:grid;place-items:center;font:900 13px Poppins;color:#fff;flex:none;border:2px solid #c6d4f2}
+.pk.on{border-color:var(--red);background:#fff1f1}
+.pk.on .o{background:var(--red);border-color:var(--red)}
+.slots3{display:flex;gap:10px;margin-bottom:6px}
+.slots3 div{flex:1;border:2px dashed #b6c7ee;border-radius:14px;padding:10px;min-height:62px;font-size:12px;font-weight:700;color:var(--muted);display:flex;align-items:center;gap:8px}
+.slots3 div.f{border:2px solid var(--blue);background:#fff;color:var(--navy)}
+.slots3 div b{font:900 22px Poppins;color:var(--red)}
+.preview{position:sticky;top:90px;text-align:center}
+.preview canvas{width:100%;max-width:320px;aspect-ratio:9/16;border-radius:22px;box-shadow:var(--shadow);background:#cfe7ff}
+.preview .acts{display:flex;gap:8px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+
+/* ---------- redes ---------- */
+.social{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.tt{background:#000;border-radius:28px;padding:16px;min-height:420px;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:var(--shadow);overflow:hidden}
+.tt blockquote{margin:0!important;max-width:100%!important;min-width:0!important}
+.tt-fallback{text-align:center;padding:30px}
+.tt-fallback svg{width:54px;height:54px;margin:0 auto 14px}
+.tt-fallback p{color:#bbb;margin:8px 0 18px;font-size:14px}
+.links{display:flex;flex-direction:column;gap:14px}
+.lk{display:flex;align-items:center;gap:16px;padding:18px;border-radius:22px;background:#fff;border:1px solid var(--line);transition:transform .25s,box-shadow .25s}
+.lk:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(10,31,107,.12)}
+.lk .ic{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;color:#fff;flex:none}
+.lk .ic svg{width:28px;height:28px}
+.lk b{display:block;font:800 17px Poppins;color:var(--navy)}
+.lk small{color:var(--muted);font-size:13px}
+.lk .go{margin-left:auto;color:var(--muted)}
+.lk.wa{background:linear-gradient(120deg,#1fae54,#0f8a3f);border:0;color:#fff;position:relative;overflow:hidden}
+.lk.wa b,.lk.wa small,.lk.wa .go{color:#fff}
+.lk.wa .ic{background:rgba(255,255,255,.2)}
+.lk.wa:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.25) 50%,transparent 70%);transform:translateX(-100%);animation:shine 3s ease-in-out infinite}
+@keyframes shine{60%,100%{transform:translateX(100%)}}
+.qr-card{display:flex;align-items:center;gap:16px;padding:18px;border-radius:22px;background:var(--navy);color:#fff}
+#qr{background:#fff;padding:8px;border-radius:12px;flex:none}
+#qr img,#qr canvas{width:104px!important;height:104px!important}
+.qr-card b{font:800 16px Poppins;display:block}
+.qr-card small{color:#b9cbf5;font-size:13px}
+.qr-card .btns{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+
+/* ---------- vota ---------- */
+.vote{position:relative;overflow:hidden;background:linear-gradient(120deg,var(--navy2),var(--blue));color:#fff;padding:clamp(70px,9vw,110px) 0}
+.vote .big{font:900 clamp(40px,8vw,110px)/.9 Poppins;letter-spacing:-2px}
+.vote .big .c{color:var(--cyan)}
+.vote-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.vote p{color:#cfe0ff;font-size:17px;max-width:520px;margin:18px 0 26px}
+.vote .ballot-hint{color:#fff}
+.vote .ballot-hint span{color:#b9cbf5}
+.vote .stripes{position:absolute;right:0;top:0;bottom:0;width:40%;background:repeating-linear-gradient(180deg,rgba(255,255,255,.06) 0 14px,transparent 14px 28px);pointer-events:none}
+.vote-afiche{position:relative;transform:rotate(3deg);border-radius:20px;overflow:hidden;box-shadow:0 40px 90px rgba(0,0,0,.45);border:6px solid #fff;max-width:380px;justify-self:center}
+
+footer{background:var(--navy3);color:#9fb4ea;padding:34px 0 calc(34px + var(--safe-b));font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer b{color:#fff}
+
+/* ---------- mini vidal ---------- */
+#mini{position:fixed;right:16px;flex-direction:row-reverse;bottom:calc(18px + var(--safe-b));z-index:150;display:flex;align-items:flex-end;gap:10px;pointer-events:none}
+#mini .av{pointer-events:auto;width:62px;height:62px;border-radius:50%;overflow:hidden;border:3px solid #fff;box-shadow:0 10px 26px rgba(10,31,107,.3);background:#ffe2c2;animation:bob 3s ease-in-out infinite}
+#mini .av img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;transform:scale(2.1);transform-origin:50% 22%}
+#mini .say{pointer-events:auto;max-width:230px;background:#fff;color:var(--navy);padding:10px 14px;border-radius:16px 16px 4px 16px;font-weight:700;font-size:13px;box-shadow:0 12px 30px rgba(10,31,107,.22);opacity:0;transform:translateY(10px) scale(.95);transition:.35s;position:relative}
+#mini .say.show{opacity:1;transform:none}
+#mini .say button{position:absolute;right:4px;top:2px;font-size:14px;color:var(--muted);width:20px;height:20px}
+#mini .say small{display:block;font:800 10px Inter;color:var(--red);letter-spacing:1px;text-transform:uppercase}
+
+/* ---------- toast & confetti ---------- */
+#toast{position:fixed;left:50%;bottom:calc(30px + var(--safe-b));transform:translate(-50%,30px);background:var(--navy);color:#fff;padding:12px 18px;border-radius:14px;font-weight:700;font-size:14px;z-index:600;opacity:0;transition:.35s;pointer-events:none;box-shadow:0 14px 40px rgba(3,11,48,.4);max-width:calc(100vw - 32px);text-align:center}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:700}
+
+/* ---------- responsive ---------- */
+@media (max-width:1060px){
+  .nav-links a:not(.btn-wa){display:none}
+  .areas-grid{grid-template-columns:1fr 1fr}
+  .areas-grid .area:last-child{grid-column:1/-1}
+  .top3{grid-template-columns:1fr}
+  .preview{position:static}
+  .st-nav{display:none}
+}
+@media (max-width:860px){
+  html{scroll-padding-top:70px}
+  .topbar{height:60px}
+  .hero{padding-top:80px}
+  .hero-grid{grid-template-columns:1fr;gap:10px;min-height:auto}
+  .hero-copy{order:2}
+  .portrait{width:min(270px,70vw);margin-top:6px}
+  .badge.b1{left:-26px}
+  .badge.b2{right:-26px}
+  .badge b{font-size:20px}
+  .badge .ic{width:32px;height:32px}
+  .portrait .vback{font-size:240px}
+  .foryou.show{grid-template-columns:1fr}
+  .fac{grid-template-columns:1fr}
+  .lego{max-height:520px}
+  .social{grid-template-columns:1fr}
+  .vote-grid{grid-template-columns:1fr}
+  .vote-afiche{max-width:300px}
+  .bottombar{
+    display:flex;position:fixed;left:10px;right:10px;bottom:calc(10px + var(--safe-b));z-index:140;
+    background:rgba(6,19,74,.94);backdrop-filter:blur(14px);border-radius:20px;padding:6px;
+    box-shadow:0 14px 40px rgba(3,11,48,.35);justify-content:space-around
+  }
+  .bottombar a{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:7px 2px;border-radius:14px;color:#9fb4ea;font-size:10px;font-weight:700}
+  .bottombar a svg{width:20px;height:20px}
+  .bottombar a.active{color:#fff;background:rgba(255,255,255,.1)}
+  .bottombar a.wa{color:#fff;background:#1fae54}
+  #mini{bottom:calc(86px + var(--safe-b))}
+  #mini .say{max-width:200px}
+  #toast{bottom:calc(96px + var(--safe-b))}
+  footer{padding-bottom:calc(100px + var(--safe-b))}
+}
+@media (max-width:620px){
+  .areas-grid{grid-template-columns:1fr}
+  .foryou .r{grid-template-columns:1fr;gap:10px}
+  .fy-card{flex-direction:row;align-items:center}
+  .fy-card img{width:84px;flex:none}
+  .pick{grid-template-columns:1fr}
+  .stats b{font-size:24px}
+  .vbanner .b{margin-left:20px}
+  .hero-cta .btn{flex:1}
+  .slots3 div{font-size:11px;padding:8px}
+  .qr-card{flex-direction:column;text-align:center}
+  .qr-card .btns{justify-content:center}
+  .logo small{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation:none!important;transition:none!important}
+  .reveal,.word{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
-<header>
-  <h1>Decano · Facultad de Ciencias y Tecnología</h1>
-  <p class="sub">Claustro Universitario USFX 2026 — mesas, docentes y estudiantes habilitados</p>
-  <span class="reserva">Uso interno · manejar con reserva</span>
+
+<div id="loader" aria-hidden="true">
+  <div>
+    <div class="urn"><div class="paper"></div><div class="box"></div></div>
+    <p>El cambio<br>se demuestra con hechos</p>
+  </div>
+</div>
+<div id="progress"></div>
+<canvas id="confetti"></canvas>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<!-- NAV -->
+<header class="topbar" id="topbar">
+  <div class="wrap">
+    <a href="#inicio" class="logo" aria-label="Inicio">
+      <span class="vmark">V</span>
+      <span><b>VIDAL DECANO</b><small>FCyT · USFX · 2026–2030</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Secciones">
+      <a href="#carrera">Tu carrera</a>
+      <a href="#propuestas">Propuestas</a>
+      <a href="#facultad">Facultad</a>
+      <a href="#juego">Juego</a>
+      <a href="#top3">Mi Top 3</a>
+      <a href="#redes">Redes</a>
+      <a class="btn-wa" href="https://chat.whatsapp.com/LbOJYBLJYilFaVGRYxg7o4" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zM20.5 3.5C18.2 1.2 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.5-8.4z"/></svg>Únete</a>
+    </nav>
+  </div>
 </header>
+
+<nav class="bottombar" aria-label="Navegación rápida">
+  <a href="#inicio" data-nav="inicio"><i data-lucide="home"></i>Inicio</a>
+  <a href="#carrera" data-nav="carrera"><i data-lucide="graduation-cap"></i>Carrera</a>
+  <a href="#propuestas" data-nav="propuestas"><i data-lucide="sparkles"></i>Propuestas</a>
+  <a href="#juego" data-nav="juego"><i data-lucide="gamepad-2"></i>Jugar</a>
+  <a href="https://chat.whatsapp.com/LbOJYBLJYilFaVGRYxg7o4" target="_blank" rel="noopener" class="wa"><i data-lucide="message-circle"></i>Grupo</a>
+</nav>
+
 <main>
-  <nav role="tablist">
-    <button role="tab" data-t="resumen" aria-selected="true">Resumen</button>
-    <button role="tab" data-t="mesas">Mesas</button>
-    <button role="tab" data-t="estudiantes">Buscar estudiante</button>
-    <button role="tab" data-t="docentes">Docentes</button>
-    <button role="tab" data-t="obs">Observaciones</button>
-  </nav>
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <canvas id="hexbg"></canvas>
+  <div class="cloud" style="width:340px;height:140px;left:-80px;top:120px"></div>
+  <div class="cloud" style="width:420px;height:160px;right:8%;top:60px;animation-delay:-5s"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="areas">
+        <span><i data-lucide="flask-conical"></i>Área 7x</span>
+        <span><i data-lucide="cpu"></i>Área TICS</span>
+        <span><i data-lucide="wrench"></i>Área Téc. Superior</span>
+      </div>
+      <h1 class="claim">
+        <span class="l1"><span class="word" style="animation-delay:.9s">EL</span> <span class="word" style="animation-delay:1s">CAMBIO</span></span>
+        <span class="l2"><span class="word" style="animation-delay:1.15s">SE</span> <span class="word" style="animation-delay:1.25s">DEMUESTRA</span></span>
+        <span class="l3"><span class="word script" style="animation-delay:1.45s">con</span><span class="word" style="animation-delay:1.55s">HECHOS</span></span>
+      </h1>
+      <div class="vbanner" aria-label="Vidal Decano">
+        <span class="a"><i>VIDAL</i></span>
+        <span class="b"><i>DECANO</i></span>
+      </div>
+      <p class="who"><b>Ing. Vidal López Gonzales</b> · Candidato a Decano de la <b>Facultad de Ciencias y Tecnología</b> USFX · Gestión 2026–2030. <b style="color:var(--red)">Una transformación real.</b></p>
 
-  <section id="resumen">
-    <div class="kpis" id="kpis"></div>
-    <h2>Cómo están armadas las mesas</h2>
-    <div class="card">
-      <p>Las mesas de estudiantes van <b>por carrera</b> y, dentro de cada carrera, <b>por apellido en orden alfabético</b>. Eso se ve en el PDF de recintos: las ánforas de Director de Química solo están en las mesas 115–116, y las de Director de Sistemas solo en 118, 119, 120, 125, 126 y 130.</p>
-      <ul class="obs">
-        <li><b>Sistemas, Animación Digital, Ciberseguridad y Computación</b> (1.860 estudiantes): mesas 118 → 119 → 120 → 125 → 126 → 130, de la A a la Z.</li>
-        <li><b>Química Industrial</b> (463): mesa 115 (A–L) y 116 (L–Z).</li>
-        <li><b>Las demás carreras</b> (Industrial, Química, Alimentos, Petróleo, Ambiental, Telecomunicaciones, Biotecnología, etc.): mesas 114, 117, 121, 122, 123, 124, 127, 128 y 129. El padrón oficial no dice la carrera de estos estudiantes, por eso no se puede saber su mesa exacta.</li>
-        <li><b>Docentes</b>: mesa 18 en la Facultad de Tecnología (143) y mesa 21 en Monteagudo (6).</li>
-        <li><b>Provincia Monteagudo</b>: mesa 154 (31 estudiantes).</li>
-      </ul>
-      <p class="nota">Los rangos alfabéticos de Sistemas y Química son aproximados (±5 nombres): se calcularon repartiendo el padrón de Director en orden con la cantidad de cada ánfora. Revisen la lista pegada en la puerta de cada mesa el día de la elección.</p>
+      <div class="ballot">
+        <div class="paper" aria-label="Papeleta de ejemplo">
+          <div class="slot me">
+            <div class="ph"><img src="assets/img/vidal.webp" alt=""></div>
+            <small>ING. VIDAL<br>LÓPEZ GONZALES</small>
+            <button class="chk" data-vote aria-label="Marcar a Vidal"><svg viewBox="0 0 44 44"><path d="M8 24l9 9 20-24"/></svg></button>
+          </div>
+          <div class="slot"><div class="ph"><i data-lucide="user"></i></div><small></small><span class="chk"></span></div>
+          <div class="slot"><div class="ph"><i data-lucide="user"></i></div><small></small><span class="chk"></span></div>
+        </div>
+        <div class="ballot-hint">¡Practica tu voto!<span>Toca la casilla de Vidal y marca el cambio.</span></div>
+      </div>
+
+      <div class="hero-cta">
+        <a href="#carrera" class="btn btn-primary"><i data-lucide="graduation-cap"></i>¿Qué hay para mi carrera?</a>
+        <button class="btn btn-white" data-story="0"><i data-lucide="play"></i>Ver propuestas</button>
+      </div>
     </div>
-    <h2>Delegados necesarios</h2>
-    <div class="card" id="delegados"></div>
-  </section>
 
-  <section id="mesas" hidden>
-    <div class="card scroll"><table class="tabla" id="tMesas"></table></div>
-  </section>
-
-  <section id="estudiantes" hidden>
-    <div class="filtros">
-      <input id="q" type="search" placeholder="Buscar por apellido o nombre…" autocomplete="off">
-      <select id="fCar"></select>
-      <select id="fMesa"></select>
-      <select id="fOtro"><option value="">Todos</option><option value="o">En 2 facultades</option></select>
+    <div class="portrait reveal">
+      <div class="vback">V</div>
+      <div class="stripe"></div>
+      <div class="frame"><img src="assets/img/vidal.webp" alt="Ing. Vidal López Gonzales, candidato a Decano"></div>
+      <span class="gestion">GESTIÓN 2026 – 2030</span>
+      <div class="badge b1"><span class="ic" style="background:var(--blue)"><i data-lucide="sparkles"></i></span><span><b data-count="10">0</b><small>propuestas<br>concretas</small></span></div>
+      <div class="badge b2"><span class="ic" style="background:var(--red)"><i data-lucide="graduation-cap"></i></span><span><b data-count="16">0</b><small>carreras,<br>una facultad</small></span></div>
+      <div class="badge b3"><span class="ic" style="background:var(--navy)"><i data-lucide="layers"></i></span><span><b data-count="3">0</b><small>áreas<br>unidas</small></span></div>
     </div>
-    <div class="letras" id="letras"></div>
-    <p class="nota" id="cuenta"></p>
-    <div class="card scroll"><table class="tabla" id="tEst"></table></div>
-    <p class="nota">Se muestran hasta 400 resultados; escriba más letras para afinar.</p>
-  </section>
+  </div>
 
-  <section id="docentes" hidden>
-    <div class="filtros">
-      <input id="qd" type="search" placeholder="Buscar docente…" autocomplete="off">
-      <select id="fdMesa"><option value="">Todas las mesas</option><option value="18">Mesa 18 · Tecnología</option><option value="21">Mesa 21 · Monteagudo</option></select>
-      <select id="fdVota"><option value="">Votan solo decano o más</option><option value="Director Sistemas">También Director Sistemas</option><option value="Director Química">También Director Química</option></select>
-      <span></span>
+  <div class="ticker" aria-hidden="true"><div class="track" id="ticker"></div></div>
+</section>
+
+<!-- CARRERA -->
+<section class="sec white" id="carrera">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="kicker">01 · Personaliza</div><h2 class="sec-title">¿Cuál es <span class="c">tu carrera?</span></h2></div>
+      <p class="sec-sub">Toca la tuya y te mostramos las propuestas que más te van a cambiar el día a día. Son 16 carreras, una sola facultad.</p>
     </div>
-    <p class="nota" id="cuentaD"></p>
-    <div class="card scroll"><table class="tabla" id="tDoc"></table></div>
-    <p class="nota">Las carreras y materias que dicta cada docente salen del Plan de Estudios USFX (cantidad de materias). Para Monteagudo se marcaron 8 docentes probables, pero el PDF dice que votan 6 ahí.</p>
-  </section>
+    <div class="areas-grid reveal" id="areas"></div>
+    <div class="foryou" id="foryou">
+      <div class="l">
+        <div class="hi" id="fyHi"></div>
+        <p id="fyTxt"></p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px">
+          <a href="#propuestas" class="btn btn-white btn-sm"><i data-lucide="sparkles"></i>Ver todas</a>
+          <a href="#top3" class="btn btn-ghost btn-sm"><i data-lucide="image"></i>Crear mi tarjeta</a>
+        </div>
+      </div>
+      <div class="r" id="fyCards"></div>
+    </div>
+  </div>
+</section>
 
-  <section id="obs" hidden>
-    <div class="card" id="obsBox"></div>
-  </section>
+<!-- PROPUESTAS -->
+<section class="sec" id="propuestas">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="kicker">02 · Lo que haremos</div><h2 class="sec-title">Propuestas <span class="c">con hechos</span></h2></div>
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="props" id="props"></div>
+    <p class="more-props reveal">Dale <b style="color:var(--red)">♥</b> a tus 3 favoritas y arma tu tarjeta para tu estado. Toca cualquier afiche para verlo en modo historia.</p>
+  </div>
+</section>
+
+<!-- FACULTAD -->
+<section class="sec white" id="facultad">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="kicker">03 · Nuestra casa</div><h2 class="sec-title">Una facultad, <span class="r">una transformación real</span></h2></div>
+      <p class="sec-sub">Aulas, laboratorios, patio, cancha y cafetería: los espacios donde vivimos la U merecen estar a nuestra altura.</p>
+    </div>
+    <div class="fac">
+      <div class="fac-photo reveal">
+        <img src="assets/img/campus.webp" alt="Patio de la Facultad de Ciencias y Tecnología" loading="lazy">
+        <div class="cap">
+          <h3>Facultad de Ciencias y Tecnología</h3>
+          <p>Universidad San Francisco Xavier de Chuquisaca · Sucre, Bolivia.</p>
+          <div class="stats">
+            <div class="stat"><b data-count="16">0</b><small>carreras</small></div>
+            <div class="stat"><b data-count="3">0</b><small>áreas</small></div>
+            <div class="stat"><b data-count="10">0</b><small>propuestas</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="lego reveal">
+        <div class="bub">¡Hola! Soy <b>Mini Vidal</b> 👋 Ya estoy recorriendo los pasillos. ¿Me acompañas al cambio?</div>
+        <img src="assets/img/lego.webp" alt="Mini Vidal, versión bloque, en un pasillo de la facultad" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JUEGO -->
+<section class="sec dark" id="juego">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="kicker">04 · Zona gamer</div><h2 class="sec-title">Atrapa los <span class="c">hechos</span></h2></div>
+      <p class="sec-sub">Mueve la ánfora y atrapa las propuestas. Esquiva el humo y la burocracia. ¿Llegas a <b style="color:#fff">Decano del cambio</b>?</p>
+    </div>
+    <div class="game-box reveal" id="gbox">
+      <canvas id="gcv" aria-label="Juego Atrapa los hechos"></canvas>
+      <div class="g-hud">
+        <span class="pill">Puntos <b id="gScore">0</b></span>
+        <span class="pill" id="gCombo">x1</span>
+        <span class="pill"><span id="gLives">❤️❤️❤️</span> · <b id="gTime">40</b>s</span>
+      </div>
+      <div class="g-over" id="gStart">
+        <div>
+          <h3>Atrapa los <span class="c">hechos</span></h3>
+          <p>Desliza el dedo o usa el mouse / flechas. Cada 5 atrapadas seguidas sube tu combo.</p>
+          <div class="g-legend">
+            <span>📚 Apoyo</span><span>🧪 Labs</span><span>🚌 Bus</span><span>📶 Wi-Fi</span><span>🏀 Cancha</span><span>☕ Cafetería</span><span>🖥️ Pizarras</span><span>🏢 Bloque H</span>
+            <span class="bad">💨 Puro humo</span><span class="bad">🐌 Burocracia</span>
+          </div>
+          <button class="btn btn-primary" id="gPlay"><i data-lucide="play"></i>Jugar</button>
+        </div>
+      </div>
+      <div class="g-over hide" id="gEnd">
+        <div>
+          <div style="font-weight:800;color:#b9cbf5;letter-spacing:2px;font-size:12px">TU PUNTAJE</div>
+          <div class="g-score" id="gFinal">0</div>
+          <div class="g-rank" id="gRank"></div>
+          <p id="gBest"></p>
+          <div class="g-btns">
+            <button class="btn btn-primary" id="gAgain"><i data-lucide="rotate-ccw"></i>Otra vez</button>
+            <button class="btn btn-ghost" id="gShare"><i data-lucide="share-2"></i>Reta a un amigo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOP 3 -->
+<section class="sec white" id="top3">
+  <div class="wrap top3">
+    <div class="reveal">
+      <div class="kicker">05 · Hazlo tuyo</div>
+      <h2 class="sec-title">Mi <span class="r">Top 3</span> para la facultad</h2>
+      <p class="sec-sub" style="margin-top:14px">Elige tus 3 propuestas favoritas en orden y genera una tarjeta lista para tu estado de WhatsApp, Instagram o TikTok.</p>
+      <div class="pick" id="pick"></div>
+      <div class="slots3" id="slots3"></div>
+    </div>
+    <div class="preview reveal">
+      <canvas id="card" width="1080" height="1920" aria-label="Vista previa de tu tarjeta"></canvas>
+      <div class="acts">
+        <button class="btn btn-red btn-sm" id="cardShare"><i data-lucide="share-2"></i>Compartir</button>
+        <button class="btn btn-white btn-sm" id="cardDl"><i data-lucide="download"></i>Descargar</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REDES -->
+<section class="sec" id="redes">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="kicker">06 · Síguenos</div><h2 class="sec-title">Súmate al <span class="c">cambio</span></h2></div>
+      <p class="sec-sub">Videos, novedades y todo lo que viene. Entra al grupo y entérate primero.</p>
+    </div>
+    <div class="social">
+      <div class="tt reveal" id="tt">
+        <div class="tt-fallback">
+          <svg viewBox="0 0 24 24" fill="#fff"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.7a2.9 2.9 0 1 1-2-2.7V9.4a6.3 6.3 0 1 0 5.4 6.3V8.8a8.2 8.2 0 0 0 4.8 1.5V6.9l-1-.2z"/></svg>
+          <b style="font:800 18px Poppins">@vidaldecano</b>
+          <p>Mira el video directamente aquí.</p>
+          <button class="btn btn-white btn-sm" id="ttLoad"><i data-lucide="play"></i>Cargar video</button>
+        </div>
+      </div>
+      <div class="links reveal">
+        <a class="lk wa" href="https://chat.whatsapp.com/LbOJYBLJYilFaVGRYxg7o4" target="_blank" rel="noopener">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zM20.5 3.5C18.2 1.2 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.5-8.4z"/></svg></span>
+          <span><b>Grupo de WhatsApp</b><small>Únete y entérate antes que nadie</small></span>
+          <i data-lucide="arrow-up-right" class="go"></i>
+        </a>
+        <a class="lk" href="https://www.tiktok.com/@vidaldecano" target="_blank" rel="noopener">
+          <span class="ic" style="background:#000"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.7a2.9 2.9 0 1 1-2-2.7V9.4a6.3 6.3 0 1 0 5.4 6.3V8.8a8.2 8.2 0 0 0 4.8 1.5V6.9l-1-.2z"/></svg></span>
+          <span><b>TikTok</b><small>@vidaldecano</small></span>
+          <i data-lucide="arrow-up-right" class="go"></i>
+        </a>
+        <a class="lk" href="https://www.facebook.com/people/Ing-Vidal-Lopez/61595421808779/" target="_blank" rel="noopener">
+          <span class="ic" style="background:#1877f2"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg></span>
+          <span><b>Facebook</b><small>Ing. Vidal López</small></span>
+          <i data-lucide="arrow-up-right" class="go"></i>
+        </a>
+        <div class="qr-card">
+          <div id="qr"></div>
+          <div>
+            <b>Pasa la voz</b>
+            <small>Escanea o comparte esta página con tu grupo de curso.</small>
+            <div class="btns">
+              <button class="btn btn-primary btn-sm" id="sharePage"><i data-lucide="share-2"></i>Compartir</button>
+              <button class="btn btn-ghost btn-sm" id="copyLink"><i data-lucide="link"></i>Copiar link</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOTA -->
+<section class="vote" id="vota">
+  <div class="stripes"></div>
+  <div class="wrap vote-grid">
+    <div class="reveal">
+      <div class="big">EL DÍA DE LA<br>ELECCIÓN, <span class="c">MARCA</span><br>VIDAL</div>
+      <p>Facultad de Ciencias y Tecnología · Gestión 2026–2030. <b style="color:#fff">El cambio se demuestra con hechos.</b></p>
+      <div class="ballot" style="margin-top:0">
+        <div class="paper">
+          <div class="slot me">
+            <div class="ph"><img src="assets/img/vidal.webp" alt=""></div>
+            <small>ING. VIDAL<br>LÓPEZ GONZALES</small>
+            <button class="chk" data-vote aria-label="Marcar a Vidal"><svg viewBox="0 0 44 44"><path d="M8 24l9 9 20-24"/></svg></button>
+          </div>
+          <div class="slot"><div class="ph"><i data-lucide="user"></i></div><small></small><span class="chk"></span></div>
+          <div class="slot"><div class="ph"><i data-lucide="user"></i></div><small></small><span class="chk"></span></div>
+        </div>
+        <div class="ballot-hint">Así de fácil.<span>Una marca, una transformación real.</span></div>
+      </div>
+    </div>
+    <div class="vote-afiche reveal"><img src="assets/img/afiche.webp" alt="Afiche oficial Vidal Decano" loading="lazy"></div>
+  </div>
+</section>
 </main>
-<script src="datos.js"></script>
-<script src="app.js"></script>
+
+<footer>
+  <div class="wrap">
+    <div><b>VIDAL DECANO</b> · Facultad de Ciencias y Tecnología · USFX · Gestión 2026–2030</div>
+    <div>El cambio se demuestra <span class="script" style="color:var(--red2)">con</span> <b>hechos</b></div>
+  </div>
+</footer>
+
+<!-- STORIES -->
+<div id="stories" role="dialog" aria-modal="true" aria-label="Propuestas en modo historia">
+  <div class="st-wrap">
+    <div class="st-bars" id="stBars"></div>
+    <div class="st-top">
+      <span class="vmark">V</span>
+      <span><b>vidaldecano</b><small id="stCount"></small></span>
+      <button class="x" id="stClose" aria-label="Cerrar"><i data-lucide="x"></i></button>
+    </div>
+    <div class="st-img" id="stImg">
+      <button class="st-tap l" id="stPrevTap" aria-label="Anterior"></button>
+      <button class="st-tap r" id="stNextTap" aria-label="Siguiente"></button>
+      <button class="st-nav p" id="stPrev" aria-label="Anterior"><i data-lucide="chevron-left"></i></button>
+      <button class="st-nav n" id="stNext" aria-label="Siguiente"><i data-lucide="chevron-right"></i></button>
+    </div>
+    <div class="st-cap"><h4 id="stTitle"></h4><p id="stDesc"></p></div>
+    <div class="st-acts">
+      <button class="heart" id="stHeart"><i data-lucide="heart"></i><span>La quiero</span></button>
+      <button class="heart" id="stShare"><i data-lucide="share-2"></i>Compartir</button>
+    </div>
+  </div>
+</div>
+
+<!-- MINI VIDAL -->
+<div id="mini" aria-live="polite">
+  <button class="av" id="miniAv" aria-label="Mini Vidal"><img src="assets/img/lego.webp" alt=""></button>
+  <div class="say" id="miniSay"><button id="miniX" aria-label="Cerrar">×</button><small>Mini Vidal</small><span id="miniTxt"></span></div>
+</div>
+
+<script>
+const WA='https://chat.whatsapp.com/LbOJYBLJYilFaVGRYxg7o4';
+const PROPS=[
+  {n:'01',cat:'acad',icon:'book-open',emoji:'📚',t:'Clases de apoyo gratuitas',d:'Un Centro de Apoyo Académico para reforzar, resolver dudas y prepararte para tus exámenes: Álgebra, Cálculo, Física, Química y Programación.'},
+  {n:'03',cat:'acad',icon:'flask-conical',emoji:'🧪',t:'Laboratorios mejor equipados',d:'Reparación de equipos, mantenimiento y adquisición de nuevos materiales y herramientas para las prácticas de todas las carreras.'},
+  {n:'04',cat:'vida',icon:'library',emoji:'💻',t:'Biblioteca virtual moderna y cómoda',d:'Mesas para trabajos grupales, pizarras, sillones, enchufes y mejor internet para estudiar y trabajar en equipo.'},
+  {n:'05',cat:'infra',icon:'building-2',emoji:'🏢',t:'Nuevo Bloque H',d:'Impulsar la construcción de un nuevo Bloque H que conecte los bloques de la facultad, con más aulas y ambientes.'},
+  {n:'06',cat:'infra',icon:'arrow-up-down',emoji:'🛗',t:'Ascensor en nuestra facultad',d:'Continuar las gestiones para instalar un ascensor y lograr una facultad accesible, especialmente para personas con movilidad reducida.'},
+  {n:'07',cat:'vida',icon:'wifi',emoji:'📶',t:'Patio con bancas, sombra y Wi-Fi',d:'Más bancas, espacios techados, puntos de carga y mejor Wi-Fi para estudiar y compartir.'},
+  {n:'09',cat:'vida',icon:'coffee',emoji:'☕',t:'Mejoramiento de la cafetería',d:'Continuar las mejoras: iluminación, mobiliario, limpieza y los acabados pendientes.'},
+  {n:'12',cat:'vida',icon:'trophy',emoji:'🏀',t:'Cancha equipada para básquetbol',d:'Aros, tableros y demarcación para que también podamos jugar básquetbol en nuestra cancha.'},
+  {n:'15',cat:'acad',icon:'bus',emoji:'🚌',t:'Bus para visitas industriales y académicas',d:'Gestionar un bus moderno para las visitas industriales, técnicas e institucionales de todas las carreras.'},
+  {n:'16',cat:'acad',icon:'presentation',emoji:'🖥️',t:'Pizarras digitales en las aulas',d:'Incorporación progresiva de pizarras digitales en los ambientes académicos para modernizar nuestras clases.'}
+];
+const CATS={acad:{l:'Académico',c:'var(--c-acad)'},infra:{l:'Infraestructura',c:'var(--c-infra)'},vida:{l:'Vida universitaria',c:'var(--c-vida)'}};
+const AREAS=[
+  {name:'Ingenierías',icon:'flask-conical',cars:[
+    {n:'Ing. Química',i:'flask-conical',p:['03','15','01']},
+    {n:'Ing. Industrial',i:'factory',p:['15','03','01']},
+    {n:'Ing. Ambiental',i:'leaf',p:['03','15','07']},
+    {n:'Ing. en Industrias Alimentarias',i:'wheat',p:['03','15','01']},
+    {n:'Ing. en Petróleo, Gas y Energías Primarias',i:'fuel',p:['15','03','01']}
+  ]},
+  {name:'Sistemas y TICS',icon:'cpu',cars:[
+    {n:'Ing. de Sistemas',i:'server',p:['16','04','07']},
+    {n:'Ing. en Tecnología de la Información y Seguridad',i:'shield-check',p:['16','07','04']},
+    {n:'Ing. en Ciencias de la Computación',i:'code',p:['01','16','04']},
+    {n:'Ing. en Diseño y Animación Digital',i:'palette',p:['16','04','07']},
+    {n:'Ing. en Ciberseguridad',i:'lock',p:['16','04','07']},
+    {n:'Ing. en Telecomunicaciones',i:'radio-tower',p:['03','16','15']}
+  ]},
+  {name:'Técnico Superior',icon:'wrench',cars:[
+    {n:'Química Industrial',i:'test-tube',p:['03','01','15']},
+    {n:'Industria de Alimentos',i:'utensils',p:['03','15','09']},
+    {n:'Informática',i:'monitor',p:['16','01','07']},
+    {n:'Petróleo y Gas Natural',i:'droplet',p:['15','03','01']}
+  ]}
+];
+const CARS=AREAS.flatMap((a,ai)=>a.cars.map(c=>({...c,area:ai})));
+const AREA_MSG=[
+  'En las ingenierías se aprende en el laboratorio y en la industria. Por eso estas propuestas van primero para ti:',
+  'Lo tuyo es la tecnología: aulas digitales, buena conexión y espacios para programar en equipo.',
+  'Formación técnica es práctica real: equipos que funcionen, visitas a la industria y apoyo cuando lo necesites.'
+];
+const byN=n=>PROPS.find(p=>p.n===n);
+const $=s=>document.querySelector(s);
+const $$=s=>[...document.querySelectorAll(s)];
+const store={
+  get(k,d){try{const v=localStorage.getItem(k);return v===null?d:JSON.parse(v)}catch(e){return d}},
+  set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+};
+let career=store.get('vd_car',null);
+let fav=store.get('vd_top',[]).filter(n=>byN(n));
+let filter='all';
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function icons(){window.lucide&&lucide.createIcons()}
+let tT;
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(tT);tT=setTimeout(()=>t.classList.remove('show'),2600)}
+
+/* ---------- confetti ---------- */
+const cf=$('#confetti'),cx=cf.getContext('2d');let parts=[],cfRun=false;
+function confetti(x,y,n=120){
+  if(reduce)return;
+  const cols=['#1450e6','#19c2ff','#e4232d','#ffffff','#0a1f6b'];
+  for(let i=0;i<n;i++)parts.push({x,y,vx:(Math.random()-.5)*14,vy:-Math.random()*14-4,r:Math.random()*6+4,c:cols[i%cols.length],a:Math.random()*6,va:(Math.random()-.5)*.4,life:120});
+  if(!cfRun){cfRun=true;requestAnimationFrame(cfLoop)}
+}
+function cfLoop(){
+  cf.width=innerWidth;cf.height=innerHeight;
+  parts=parts.filter(p=>p.life-->0&&p.y<innerHeight+40);
+  for(const p of parts){p.vy+=.35;p.vx*=.99;p.x+=p.vx;p.y+=p.vy;p.a+=p.va;cx.save();cx.translate(p.x,p.y);cx.rotate(p.a);cx.fillStyle=p.c;cx.fillRect(-p.r/2,-p.r/4,p.r,p.r/2);cx.restore()}
+  if(parts.length)requestAnimationFrame(cfLoop);else{cfRun=false;cx.clearRect(0,0,cf.width,cf.height)}
+}
+
+/* ---------- ticker ---------- */
+function renderTicker(){
+  const items=PROPS.map(p=>`<span>${p.t}</span>`).join('')+'<span>Una transformación real</span>';
+  $('#ticker').innerHTML=items+items;
+}
+
+/* ---------- papeleta ---------- */
+function bindVotes(){
+  $$('[data-vote]').forEach(b=>b.addEventListener('click',e=>{
+    const on=!b.classList.contains('on');
+    $$('[data-vote]').forEach(x=>x.classList.toggle('on',on));
+    if(on){
+      const r=b.getBoundingClientRect();confetti(r.left+r.width/2,r.top+r.height/2);
+      toast('¡Voto marcado! ✔ Así se marca el cambio');
+      store.set('vd_voted',true);
+      say('¡Eso! 🙌 Ahora elige tu carrera y te muestro lo que viene para ti.');
+    }
+  }));
+  if(store.get('vd_voted',false))$$('[data-vote]').forEach(x=>x.classList.add('on'));
+}
+
+/* ---------- carreras ---------- */
+function renderAreas(){
+  $('#areas').innerHTML=AREAS.map((a,ai)=>`
+    <div class="area">
+      <h3><span class="ic"><i data-lucide="${a.icon}"></i></span>${a.name}<em>${a.cars.length}</em></h3>
+      <div class="car-list">${a.cars.map(c=>{const idx=CARS.findIndex(x=>x.n===c.n);return`
+        <button class="car${career===idx?' on':''}" data-car="${idx}"><span class="ci"><i data-lucide="${c.i}"></i></span>${c.n}<span class="tick"></span></button>`}).join('')}
+      </div>
+    </div>`).join('');
+  $$('.car').forEach(b=>b.addEventListener('click',()=>{
+    const idx=+b.dataset.car;
+    career=career===idx?null:idx;store.set('vd_car',career);
+    $$('.car').forEach(x=>x.classList.toggle('on',+x.dataset.car===career));
+    renderForYou(true);renderProps();drawCard();
+  }));
+}
+function renderForYou(scroll){
+  const box=$('#foryou');
+  if(career===null||!CARS[career]){box.classList.remove('show');return}
+  const c=CARS[career];
+  const name=c.n.replace(/^Ing\. (en |de )?/,'');
+  $('#fyHi').innerHTML=`¡Hola, crack de <span class="script">${name}</span>! 👋`;
+  $('#fyTxt').textContent=AREA_MSG[c.area];
+  $('#fyCards').innerHTML=c.p.map(n=>{const p=byN(n);return`
+    <button class="fy-card" data-story="${PROPS.indexOf(p)}"><img src="assets/flyer/p${n}-sm.webp" alt="" loading="lazy"><div><small>PROPUESTA ${n}</small><b>${p.t}</b></div></button>`}).join('');
+  box.classList.remove('show');void box.offsetWidth;box.classList.add('show');
+  bindStoryTriggers(box);icons();
+  if(scroll){
+    const r=box.getBoundingClientRect();
+    if(r.top>innerHeight*.75)box.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});
+    confetti(innerWidth/2,innerHeight*.6,60);
+  }
+}
+
+/* ---------- propuestas ---------- */
+function mine(){return career!==null&&CARS[career]?CARS[career].p:[]}
+function renderFilters(){
+  const f=[['all','Todas',PROPS.length]].concat(Object.entries(CATS).map(([k,v])=>[k,v.l,PROPS.filter(p=>p.cat===k).length]));
+  if(mine().length)f.push(['mine','♥ Para mi carrera',mine().length]);
+  if(filter==='mine'&&!mine().length)filter='all';
+  $('#filters').innerHTML=f.map(([k,l,c])=>`<button class="chip${filter===k?' on':''}" data-f="${k}">${l}<i>${c}</i></button>`).join('');
+  $$('#filters .chip').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.f;renderProps()}));
+}
+function renderProps(){
+  renderFilters();
+  const m=mine();
+  let list=PROPS.filter(p=>filter==='all'||(filter==='mine'?m.includes(p.n):p.cat===filter));
+  if(m.length)list=[...list].sort((a,b)=>(m.includes(b.n)-m.includes(a.n))||(m.indexOf(a.n)-m.indexOf(b.n)));
+  $('#props').innerHTML=list.map(p=>`
+    <article class="prop${m.includes(p.n)?' mine':''}">
+      <div class="thumb" data-story="${PROPS.indexOf(p)}" role="button" tabindex="0" aria-label="Ver afiche de la propuesta ${p.n}">
+        <img src="assets/flyer/p${p.n}-sm.webp" alt="" loading="lazy">
+        <span class="num">${p.n}</span>
+        <span class="foryou-tag"><i data-lucide="star"></i>Para ti</span>
+        <span class="play"><i data-lucide="play"></i>Ver afiche</span>
+      </div>
+      <div class="body">
+        <span class="cat" style="color:${CATS[p.cat].c}">${CATS[p.cat].l}</span>
+        <h3>${p.t}</h3>
+        <p>${p.d}</p>
+        <div class="acts">
+          <button class="heart${fav.includes(p.n)?' on':''}" data-heart="${p.n}"><i data-lucide="heart"></i>${fav.includes(p.n)?'En mi Top 3':'La quiero'}</button>
+        </div>
+      </div>
+    </article>`).join('');
+  bindStoryTriggers($('#props'));
+  $$('[data-heart]').forEach(b=>b.addEventListener('click',e=>toggleTop(b.dataset.heart,e)));
+  icons();
+}
+function toggleTop(n,e){
+  const i=fav.indexOf(n);
+  if(i>-1)fav.splice(i,1);
+  else{
+    if(fav.length>=3){toast('Ya tienes 3 favoritas. Quita una para cambiarla 😉');return}
+    fav.push(n);
+    if(e&&e.clientX)confetti(e.clientX,e.clientY,30);
+    toast(fav.length===3?'¡Top 3 listo! Baja a crear tu tarjeta 🎉':`♥ Agregada a tu Top 3 (${fav.length}/3)`);
+  }
+  store.set('vd_top',fav);
+  renderProps();renderPick();drawCard();syncStoryHeart();
+}
+
+/* ---------- stories ---------- */
+let stI=0,stT0=0,stRaf=0,stPaused=false,stElapsed=0;const ST_DUR=7000;
+function bindStoryTriggers(root){
+  root.querySelectorAll('[data-story]').forEach(el=>{
+    el.addEventListener('click',()=>openStory(+el.dataset.story));
+    el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openStory(+el.dataset.story)}});
+  });
+}
+function openStory(i){
+  $('#stBars').innerHTML=PROPS.map(()=>'<span><i></i></span>').join('');
+  $('#stories').classList.add('open');document.body.style.overflow='hidden';
+  showStory(i);
+}
+function closeStory(){$('#stories').classList.remove('open');document.body.style.overflow='';cancelAnimationFrame(stRaf)}
+function showStory(i){
+  if(i<0)i=0;
+  if(i>=PROPS.length){closeStory();toast('¡Las viste todas! Ahora arma tu Top 3 ♥');return}
+  stI=i;const p=PROPS[i];
+  const box=$('#stImg');box.querySelector('img')?.remove();
+  const img=new Image();img.src=`assets/flyer/p${p.n}.webp`;img.alt=`Afiche propuesta ${p.n}: ${p.t}`;box.prepend(img);
+  $('#stTitle').textContent=`${p.n} · ${p.t}`;$('#stDesc').textContent=p.d;
+  $('#stCount').textContent=`Propuesta ${i+1} de ${PROPS.length}`;
+  $$('#stBars i').forEach((b,k)=>b.style.width=k<i?'100%':'0');
+  syncStoryHeart();
+  stElapsed=0;stT0=performance.now();cancelAnimationFrame(stRaf);stRaf=requestAnimationFrame(stTick);
+}
+function stTick(t){
+  if(!stPaused){stElapsed+=t-stT0}
+  stT0=t;
+  const bar=$$('#stBars i')[stI];if(bar)bar.style.width=Math.min(100,stElapsed/ST_DUR*100)+'%';
+  if(stElapsed>=ST_DUR){showStory(stI+1);return}
+  stRaf=requestAnimationFrame(stTick);
+}
+function syncStoryHeart(){
+  const p=PROPS[stI],h=$('#stHeart');if(!p||!h)return;
+  const on=fav.includes(p.n);h.classList.toggle('on',on);h.querySelector('span').textContent=on?'En mi Top 3':'La quiero';
+}
+function bindStories(){
+  $('#stClose').onclick=closeStory;
+  $('#stNextTap').onclick=$('#stNext').onclick=()=>showStory(stI+1);
+  $('#stPrevTap').onclick=$('#stPrev').onclick=()=>showStory(stI-1);
+  $('#stHeart').onclick=e=>toggleTop(PROPS[stI].n,e);
+  $('#stShare').onclick=()=>{const p=PROPS[stI];share(`Propuesta ${p.n} de VIDAL DECANO: ${p.t} 💙`)};
+  const im=$('#stImg');
+  const hold=v=>()=>{stPaused=v};
+  im.addEventListener('pointerdown',hold(true));im.addEventListener('pointerup',hold(false));im.addEventListener('pointerleave',hold(false));
+  let sx=0;im.addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});
+  im.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>60)showStory(stI+(dx<0?1:-1))});
+  addEventListener('keydown',e=>{
+    if(!$('#stories').classList.contains('open'))return;
+    if(e.key==='Escape')closeStory();if(e.key==='ArrowRight')showStory(stI+1);if(e.key==='ArrowLeft')showStory(stI-1);
+  });
+}
+
+/* ---------- top3 ---------- */
+function renderPick(){
+  $('#pick').innerHTML=PROPS.map(p=>{const o=fav.indexOf(p.n);return`
+    <button class="pk${o>-1?' on':''}" data-pk="${p.n}"><span class="n">${p.n}</span>${p.t}<span class="o">${o>-1?o+1:''}</span></button>`}).join('');
+  $$('[data-pk]').forEach(b=>b.addEventListener('click',e=>toggleTop(b.dataset.pk,e)));
+  $('#slots3').innerHTML=[0,1,2].map(i=>{const p=byN(fav[i]);return p?`<div class="f"><b>${i+1}</b>${p.t}</div>`:`<div>${i+1}. Elige una</div>`}).join('');
+}
+const portrait=new Image();portrait.src='assets/img/vidal.webp';
+let portraitOk=true;
+function wrapText(ctx,text,x,y,maxW,lh,maxLines=3){
+  const words=text.split(' ');let line='',lines=[];
+  for(const w of words){const t=line?line+' '+w:w;if(ctx.measureText(t).width>maxW&&line){lines.push(line);line=w}else line=t}
+  lines.push(line);lines=lines.slice(0,maxLines);
+  lines.forEach((l,i)=>ctx.fillText(l,x,y+i*lh));return lines.length;
+}
+function slant(ctx,x,y,w,h,fill,sk=40){
+  ctx.fillStyle=fill;ctx.beginPath();ctx.moveTo(x+sk,y);ctx.lineTo(x+w+sk,y);ctx.lineTo(x+w,y+h);ctx.lineTo(x,y+h);ctx.closePath();ctx.fill();
+}
+function drawCard(){
+  const c=$('#card'),ctx=c.getContext('2d'),W=1080,H=1920;
+  const g=ctx.createLinearGradient(0,0,0,H);g.addColorStop(0,'#bfe2ff');g.addColorStop(.55,'#eaf5ff');g.addColorStop(1,'#ffffff');
+  ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+  // hex net
+  ctx.strokeStyle='rgba(20,80,230,.10)';ctx.lineWidth=2;
+  for(let y=0;y<1100;y+=90)for(let x=(y/90%2)*52;x<W;x+=104){ctx.beginPath();for(let k=0;k<6;k++){const a=Math.PI/3*k+Math.PI/6;ctx.lineTo(x+40*Math.cos(a),y+40*Math.sin(a))}ctx.closePath();ctx.stroke()}
+  // header
+  ctx.fillStyle='#0a1f6b';ctx.fillRect(0,0,W,120);
+  ctx.fillStyle='#fff';ctx.font='800 34px Inter';ctx.textAlign='left';ctx.fillText('FACULTAD DE CIENCIAS Y TECNOLOGÍA',60,74);
+  ctx.fillStyle='#19c2ff';ctx.font='800 30px Inter';ctx.textAlign='right';ctx.fillText('2026–2030',W-60,74);
+  // portrait
+  if(portraitOk&&portrait.complete&&portrait.naturalWidth){
+    ctx.save();const px=W-560,py=150,pw=520,ph=785;
+    ctx.beginPath();ctx.moveTo(px+70,py);ctx.lineTo(px+pw,py);ctx.lineTo(px+pw,py+ph);ctx.lineTo(px,py+ph);ctx.lineTo(px,py+60);ctx.closePath();ctx.clip();
+    ctx.drawImage(portrait,px,py,pw,ph);ctx.restore();
+  }
+  // claim
+  ctx.textAlign='left';
+  ctx.fillStyle='#0a1f6b';ctx.font='500 64px Poppins';ctx.fillText('MI VOTO',60,300);
+  ctx.font='900 72px Poppins';ctx.fillText('ES POR EL',60,380);
+  ctx.fillStyle='#1450e6';ctx.font='900 92px Poppins';ctx.fillText('CAMBIO',60,480);
+  ctx.fillStyle='#e4232d';ctx.font='64px "Kaushan Script"';ctx.fillText('con hechos',70,570);
+  const car=career!==null&&CARS[career]?CARS[career]:null;
+  if(car){
+    ctx.fillStyle='#0a1f6b';ctx.font='700 30px Inter';ctx.fillText('Desde',60,660);
+    ctx.font='800 36px Poppins';wrapText(ctx,car.n,60,708,420,44,3);
+  }
+  // banner
+  ctx.save();ctx.font='italic 900 120px Poppins';
+  slant(ctx,30,880,640,140,'#0a1f6b',50);slant(ctx,110,1036,700,140,'#1450e6',50);
+  ctx.fillStyle='#19c2ff';ctx.fillRect(110+700-20,1176,90,10);
+  ctx.fillStyle='#fff';ctx.fillText('VIDAL',90,995);ctx.fillText('DECANO',165,1151);ctx.restore();
+  // list
+  ctx.fillStyle='#e4232d';ctx.font='800 34px Inter';ctx.fillText('MIS 3 PROPUESTAS FAVORITAS',60,1290);
+  for(let i=0;i<3;i++){
+    const y=1330+i*150,p=byN(fav[i]);
+    ctx.fillStyle=p?'#ffffff':'rgba(255,255,255,.6)';ctx.beginPath();ctx.roundRect(60,y,W-120,128,28);ctx.fill();
+    ctx.strokeStyle=p?'#1450e6':'#b6c7ee';ctx.lineWidth=4;ctx.setLineDash(p?[]:[14,10]);ctx.stroke();ctx.setLineDash([]);
+    ctx.fillStyle=p?'#1450e6':'#b6c7ee';ctx.beginPath();ctx.roundRect(80,y+20,88,88,22);ctx.fill();
+    ctx.fillStyle='#fff';ctx.font='italic 900 48px Poppins';ctx.textAlign='center';ctx.fillText(i+1,124,y+82);ctx.textAlign='left';
+    ctx.fillStyle=p?'#0a1f6b':'#8ea0cc';ctx.font=p?'800 36px Poppins':'600 32px Inter';
+    if(p){const lines=ctx.measureText(p.t).width>760?2:1;wrapText(ctx,p.t,196,lines===1?y+78:y+58,760,42,2)}
+    else ctx.fillText('Elige tu favorita ♥',196,y+76);
+  }
+  // footer
+  ctx.fillStyle='#e4232d';ctx.fillRect(0,H-150,W,150);
+  ctx.fillStyle='#fff';ctx.textAlign='center';ctx.font='900 50px Poppins';ctx.fillText('UNA TRANSFORMACIÓN REAL',W/2,H-82);
+  ctx.font='700 28px Inter';ctx.fillText('#VidalDecano · Facultad de Ciencias y Tecnología USFX',W/2,H-36);
+  ctx.textAlign='left';
+}
+function cardBlob(){
+  return new Promise((res,rej)=>{
+    const c=$('#card');
+    try{c.toBlob(b=>b?res(b):rej(new Error('blob')),'image/png')}
+    catch(e){portraitOk=false;drawCard();try{c.toBlob(b=>b?res(b):rej(e),'image/png')}catch(e2){rej(e2)}}
+  });
+}
+async function cardDownload(){
+  try{
+    const b=await cardBlob();const a=document.createElement('a');
+    a.href=URL.createObjectURL(b);a.download='mi-top3-vidal-decano.png';a.click();
+    setTimeout(()=>URL.revokeObjectURL(a.href),4000);toast('¡Tarjeta descargada! Súbela a tu estado 📲');
+  }catch(e){toast('No se pudo generar la imagen en este navegador')}
+}
+async function cardShare(){
+  if(fav.length<3){toast(`Te faltan ${3-fav.length} propuesta(s) para tu Top 3`);return}
+  try{
+    const b=await cardBlob();const f=new File([b],'mi-top3-vidal-decano.png',{type:'image/png'});
+    if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],text:`Mi Top 3 para la facultad 💙 #VidalDecano ${location.href}`});return}
+  }catch(e){if(e&&e.name==='AbortError')return}
+  cardDownload();
+}
+
+/* ---------- share ---------- */
+function share(text){
+  const url=location.href.split('#')[0];
+  if(navigator.share){navigator.share({title:'VIDAL DECANO',text,url}).catch(()=>{})}
+  else window.open('https://wa.me/?text='+encodeURIComponent(text+' '+url),'_blank','noopener');
+}
+
+/* ---------- hex background ---------- */
+function hexBg(){
+  const c=$('#hexbg'),ctx=c.getContext('2d');let W,H,nodes=[];
+  function size(){const r=c.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);W=r.width;H=r.height;c.width=W*d;c.height=H*d;ctx.setTransform(d,0,0,d,0,0);
+    nodes=Array.from({length:Math.round(W*H/26000)},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25}))}
+  size();addEventListener('resize',size);
+  let vis=true;new IntersectionObserver(e=>vis=e[0].isIntersecting).observe(c);
+  function draw(){
+    if(vis){
+      ctx.clearRect(0,0,W,H);
+      for(const n of nodes){n.x+=n.vx;n.y+=n.vy;if(n.x<0||n.x>W)n.vx*=-1;if(n.y<0||n.y>H)n.vy*=-1}
+      for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){
+        const a=nodes[i],b=nodes[j],d=Math.hypot(a.x-b.x,a.y-b.y);
+        if(d<140){ctx.strokeStyle=`rgba(20,80,230,${.16*(1-d/140)})`;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}
+      }
+      ctx.fillStyle='rgba(20,80,230,.35)';for(const n of nodes){ctx.beginPath();ctx.arc(n.x,n.y,2.2,0,7);ctx.fill()}
+    }
+    if(!reduce)requestAnimationFrame(draw);
+  }
+  draw();
+}
+
+/* ---------- juego ---------- */
+function game(){
+  const cv=$('#gcv'),ctx=cv.getContext('2d');
+  const GOOD=[['📚','Clases de apoyo'],['🧪','Laboratorios'],['🚌','Bus de visitas'],['📶','Wi-Fi en el patio'],['🏀','Cancha de básquet'],['☕','Cafetería'],['🖥️','Pizarras digitales'],['🏢','Bloque H']];
+  const BAD=[['💨','Puro humo'],['🐌','Burocracia']];
+  let W,H,d,px,target,items=[],floats=[],score,combo,streak,lives,time,running=false,last=0,spawnT=0,shake=0,keys={};
+  function size(){const r=cv.getBoundingClientRect();d=Math.min(devicePixelRatio||1,2);W=r.width;H=r.height;cv.width=W*d;cv.height=H*d;ctx.setTransform(d,0,0,d,0,0);if(px==null){px=target=W/2}}
+  size();addEventListener('resize',size);
+  const BW=()=>Math.max(84,Math.min(120,W*.16));
+  function hud(){$('#gScore').textContent=score;$('#gCombo').textContent='x'+combo;$('#gLives').textContent='❤️'.repeat(lives)+'🖤'.repeat(3-lives);$('#gTime').textContent=Math.ceil(time)}
+  function start(){score=0;combo=1;streak=0;lives=3;time=40;items=[];floats=[];spawnT=0;running=true;$('#gStart').classList.add('hide');$('#gEnd').classList.add('hide');hud();last=performance.now();requestAnimationFrame(loop)}
+  function end(){
+    running=false;const best=Math.max(score,store.get('vd_best',0));store.set('vd_best',best);
+    const R=[[100,'Cachimbo con potencial 🐣'],[250,'Estudiante destacado 📘'],[450,'Auxiliar de docencia 🧑‍🏫'],[700,'Director de carrera 🎓'],[1e9,'¡Decano del cambio! 🏆']];
+    $('#gFinal').textContent=score;$('#gRank').textContent=R.find(r=>score<r[0])[1];
+    $('#gBest').textContent=`Tu mejor puntaje: ${best}. ${score>=700?'¡Eres leyenda!':'Atrapa más propuestas y sube de rango.'}`;
+    $('#gEnd').classList.remove('hide');if(score>=450){const r=cv.getBoundingClientRect();confetti(r.left+r.width/2,r.top+r.height/3)}
+    say(score>=450?'¡Qué nivel! 🔥 Comparte tu puntaje y reta a tu curso.':'¡Buen intento! Dale otra vez, que el cambio no se rinde 💪');
+  }
+  function spawn(){
+    const bad=Math.random()<Math.min(.32,.16+(40-time)*.005);
+    const [e,l]=(bad?BAD:GOOD)[Math.floor(Math.random()*(bad?BAD:GOOD).length)];
+    items.push({x:30+Math.random()*(W-60),y:-30,vy:(140+Math.random()*90)*(1+(40-time)/45),e,l,bad,rot:(Math.random()-.5)*2,a:0});
+  }
+  function drawUrn(x){
+    const bw=BW(),bh=bw*.72,y=H-bh-14;
+    ctx.save();ctx.translate(x+(shake?(Math.random()-.5)*shake:0),0);
+    ctx.fillStyle='rgba(0,0,0,.25)';ctx.beginPath();ctx.ellipse(0,H-10,bw*.55,8,0,0,7);ctx.fill();
+    const g=ctx.createLinearGradient(0,y,0,y+bh);g.addColorStop(0,'#2f7bff');g.addColorStop(1,'#1450e6');
+    ctx.fillStyle=g;ctx.beginPath();ctx.roundRect(-bw/2,y,bw,bh,10);ctx.fill();
+    ctx.fillStyle='#fff';ctx.fillRect(-bw/2,y,bw,6);
+    ctx.fillStyle='#06134a';ctx.beginPath();ctx.roundRect(-bw*.28,y-2,bw*.56,8,4);ctx.fill();
+    ctx.fillStyle='#fff';ctx.font=`italic 900 ${bh*.55}px Poppins`;ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('V',0,y+bh*.58);
+    ctx.restore();return{y,bw};
+  }
+  function loop(t){
+    if(!running)return;
+    const dt=Math.min(.05,(t-last)/1000);last=t;
+    time-=dt;if(time<=0||lives<=0){time=Math.max(0,time);hud();end();return}
+    if(keys.ArrowLeft)target-=520*dt;if(keys.ArrowRight)target+=520*dt;
+    target=Math.max(BW()/2,Math.min(W-BW()/2,target));px+=(target-px)*Math.min(1,dt*16);
+    spawnT-=dt;if(spawnT<=0){spawn();spawnT=Math.max(.32,.85-(40-time)*.013)}
+    ctx.clearRect(0,0,W,H);
+    // stars
+    ctx.fillStyle='rgba(255,255,255,.5)';for(let i=0;i<40;i++){const sx=(i*137.5)%W,sy=((i*91.3)+t*.02*(1+i%3))%H;ctx.fillRect(sx,sy,2,2)}
+    const {y:uy,bw}=drawUrn(px);
+    ctx.textAlign='center';ctx.textBaseline='middle';
+    for(const it of items){
+      it.y+=it.vy*dt;it.a+=it.rot*dt;
+      ctx.save();ctx.translate(it.x,it.y);ctx.rotate(it.a*.3);ctx.font='38px system-ui,"Apple Color Emoji","Segoe UI Emoji"';ctx.fillText(it.e,0,0);ctx.restore();
+      if(!it.done&&it.y>uy-10&&it.y<uy+30&&Math.abs(it.x-px)<bw/2+8){
+        it.done=true;
+        if(it.bad){lives--;combo=1;streak=0;shake=14;floats.push({x:it.x,y:uy-20,s:it.l+' ✖',c:'#ff6b72',l:1})}
+        else{score+=10*combo;streak++;if(streak%5===0&&combo<5){combo++;floats.push({x:W/2,y:H/2,s:'¡COMBO x'+combo+'!',c:'#19c2ff',l:1.4,big:1})}floats.push({x:it.x,y:uy-20,s:'+'+10*combo+' '+it.l,c:'#fff',l:1})}
+        hud();
+      }
+      if(!it.done&&it.y>H+30){it.done=true;if(!it.bad){streak=0;if(combo>1){combo=1;hud()}}}
+    }
+    items=items.filter(i=>!i.done);
+    for(const f of floats){f.y-=40*dt;f.l-=dt;ctx.globalAlpha=Math.max(0,Math.min(1,f.l));ctx.fillStyle=f.c;ctx.font=f.big?'900 34px Poppins':'800 15px Inter';ctx.fillText(f.s,f.x,f.y)}
+    ctx.globalAlpha=1;floats=floats.filter(f=>f.l>0);
+    shake=Math.max(0,shake-dt*40);
+    $('#gTime').textContent=Math.ceil(time);
+    requestAnimationFrame(loop);
+  }
+  const box=$('#gbox');
+  function move(e){const r=cv.getBoundingClientRect();target=(e.touches?e.touches[0].clientX:e.clientX)-r.left}
+  box.addEventListener('pointermove',e=>{if(running)move(e)});
+  box.addEventListener('touchmove',e=>{if(running){move(e);e.preventDefault()}},{passive:false});
+  addEventListener('keydown',e=>{if(running&&(e.key==='ArrowLeft'||e.key==='ArrowRight')){keys[e.key]=true;e.preventDefault()}});
+  addEventListener('keyup',e=>keys[e.key]=false);
+  $('#gPlay').onclick=start;$('#gAgain').onclick=start;
+  $('#gShare').onclick=()=>share(`Hice ${$('#gFinal').textContent} puntos en "Atrapa los hechos" de VIDAL DECANO 🎮 ¿Me superas?`);
+  // idle frame
+  ctx.clearRect(0,0,W,H);drawUrn(W/2);
+}
+
+/* ---------- mini vidal ---------- */
+let sayT,miniOff=false;
+function say(m){
+  if(miniOff)return;
+  $('#miniTxt').textContent=m;$('#miniSay').classList.add('show');
+  clearTimeout(sayT);sayT=setTimeout(()=>$('#miniSay').classList.remove('show'),6500);
+}
+function bindMini(){
+  const T={
+    carrera:'Toca tu carrera 👇 y te muestro las propuestas hechas para ti.',
+    propuestas:'Dale ♥ a tus 3 favoritas. Toca un afiche para verlo como historia.',
+    facultad:'¿Me viste en versión bloque? 😄 Así de cerca voy a estar.',
+    juego:'¿Te animas? Atrapa los hechos y esquiva el humo 💨',
+    top3:'Crea tu tarjeta y súbela a tu estado. ¡Que se entere tu curso!',
+    redes:'Entra al grupo de WhatsApp y entérate primero 📲',
+    vota:'El día de la elección: una marca, una transformación real ✔'
+  };
+  const seen={};
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    const id=e.target.id;
+    if(e.isIntersecting&&T[id]&&!seen[id]){seen[id]=1;say(T[id])}
+  }),{threshold:.35});
+  Object.keys(T).forEach(id=>{const el=document.getElementById(id);el&&io.observe(el)});
+  $('#miniX').onclick=()=>{$('#miniSay').classList.remove('show')};
+  $('#miniAv').onclick=()=>{miniOff=false;const tips=['¡Hola! Soy Mini Vidal 👋','¿Ya marcaste la papeleta de arriba?','Tu mejor puntaje en el juego: '+store.get('vd_best',0)+' pts','Llevas '+fav.length+'/3 en tu Top 3 ♥'];say(tips[Math.floor(Math.random()*tips.length)])};
+  setTimeout(()=>say('¡Hola! Soy Mini Vidal 👋 Marca la papeleta y descubre lo que viene.'),2600);
+}
+
+/* ---------- misc ---------- */
+function countUp(el){
+  const to=+el.dataset.count;if(reduce){el.textContent=to;return}
+  const t0=performance.now();(function f(t){const k=Math.min(1,(t-t0)/1200);el.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)})(t0);
+}
+function observers(){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll('[data-count]').forEach(countUp);io.unobserve(e.target)}}),{threshold:.15});
+  $$('.reveal').forEach(el=>io.observe(el));
+  const nav=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const id=e.target.id;$$('.nav-links a,.bottombar a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id))}}),{rootMargin:'-45% 0px -50% 0px'});
+  $$('main section[id]').forEach(s=>nav.observe(s));
+  addEventListener('scroll',()=>{
+    const h=document.documentElement;$('#progress').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+    $('#topbar').classList.toggle('scrolled',h.scrollTop>20);
+  },{passive:true});
+}
+function tiktok(){
+  let loaded=false;
+  function load(){
+    if(loaded)return;loaded=true;
+    $('#tt').innerHTML='<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@vidaldecano/video/7695582291053137170" data-video-id="7695582291053137170" style="max-width:605px;min-width:280px"><section><a target="_blank" href="https://www.tiktok.com/@vidaldecano">@vidaldecano</a></section></blockquote>';
+    const s=document.createElement('script');s.src='https://www.tiktok.com/embed.js';s.async=true;document.body.appendChild(s);
+  }
+  $('#ttLoad').onclick=load;
+  new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){load();o.disconnect()}},{rootMargin:'200px'}).observe($('#tt'));
+}
+function qr(){
+  const url=location.href.split('#')[0];
+  if(window.QRCode&&/^https?:/.test(url))new QRCode($('#qr'),{text:url,width:208,height:208,colorDark:'#0a1f6b',colorLight:'#ffffff'});
+  else $('#qr').innerHTML='<div style="width:104px;height:104px;display:grid;place-items:center;color:#0a1f6b;font:900 italic 54px Poppins">V</div>';
+  $('#sharePage').onclick=()=>share('Mira las propuestas de VIDAL DECANO para la Facultad de Ciencias y Tecnología 💙');
+  $('#copyLink').onclick=()=>{navigator.clipboard?.writeText(url).then(()=>toast('¡Link copiado! Pégalo en tu grupo 📋'),()=>toast(url))};
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  renderTicker();bindVotes();renderAreas();renderForYou(false);renderProps();renderPick();bindStories();
+  bindStoryTriggers(document.querySelector('.hero'));
+  icons();observers();hexBg();game();bindMini();tiktok();qr();
+  $('#cardDl').onclick=cardDownload;$('#cardShare').onclick=cardShare;
+  (document.fonts?document.fonts.ready:Promise.resolve()).then(drawCard);
+  portrait.onload=drawCard;
+});
+addEventListener('load',()=>setTimeout(()=>$('#loader').classList.add('hide'),400));
+setTimeout(()=>$('#loader').classList.add('hide'),4000);
+</script>
 </body>
 </html>
