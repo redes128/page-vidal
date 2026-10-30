@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Decano Ciencias y Tecnología</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--tx:#1b1f24;--mut:#5d6672;--ln:#e2e5ea;--ac:#0b5cad;--acs:#e6f0fb;--ok:#18794e;--wr:#a35200;--wrs:#fff3e0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111418;--card:#1a1f25;--tx:#e8eaed;--mut:#9aa3ad;--ln:#2c333b;--ac:#6aa8ff;--acs:#1a2a3f;--ok:#4cc38a;--wr:#ffb36b;--wrs:#33261a}}
+:root[data-theme="dark"]{--bg:#111418;--card:#1a1f25;--tx:#e8eaed;--mut:#9aa3ad;--ln:#2c333b;--ac:#6aa8ff;--acs:#1a2a3f;--ok:#4cc38a;--wr:#ffb36b;--wrs:#33261a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{padding:20px 16px 8px;max-width:1100px;margin:auto}
+h1{margin:0;font-size:22px}
+.sub{color:var(--mut);margin:4px 0 0}
+.reserva{display:inline-block;margin-top:8px;background:var(--wrs);color:var(--wr);padding:3px 10px;border-radius:99px;font-size:13px;font-weight:600}
+main{max-width:1100px;margin:auto;padding:0 16px 40px}
+nav{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0;position:sticky;top:0;background:var(--bg);padding:8px 0;z-index:2}
+nav button{border:1px solid var(--ln);background:var(--card);color:var(--tx);padding:8px 14px;border-radius:99px;font:inherit;cursor:pointer}
+nav button[aria-selected="true"]{background:var(--ac);border-color:var(--ac);color:#fff}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.kpi{background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:12px 14px}
+.kpi b{display:block;font-size:26px;font-variant-numeric:tabular-nums}
+.kpi span{color:var(--mut);font-size:13px}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:14px;margin:12px 0}
+h2{font-size:17px;margin:20px 0 6px}
+.mut{color:var(--mut)}
+.tabla{width:100%;border-collapse:collapse;font-size:14px}
+.tabla th,.tabla td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--ln);vertical-align:top}
+.tabla th{font-size:12px;text-transform:uppercase;letter-spacing:.03em;color:var(--mut);position:sticky;top:52px;background:var(--card)}
+.num{text-align:right!important;font-variant-numeric:tabular-nums}
+.scroll{overflow-x:auto}
+.mesa-n{font-weight:700;font-size:18px;color:var(--ac)}
+.chip{display:inline-block;padding:1px 8px;border-radius:99px;background:var(--acs);color:var(--ac);font-size:12px;margin:1px 2px 1px 0;white-space:nowrap}
+.chip.wr{background:var(--wrs);color:var(--wr)}
+.filtros{display:grid;grid-template-columns:2fr 1fr 1fr 90px;gap:8px}
+@media (max-width:640px){.filtros{grid-template-columns:1fr 1fr}.filtros input{grid-column:1/-1}}
+input,select{font:inherit;padding:9px 10px;border:1px solid var(--ln);border-radius:8px;background:var(--card);color:var(--tx);width:100%}
+.letras{display:flex;flex-wrap:wrap;gap:4px;margin:10px 0}
+.letras button{min-width:32px;padding:5px 0;border:1px solid var(--ln);background:var(--card);color:var(--tx);border-radius:6px;cursor:pointer;font:inherit;font-size:13px}
+.letras button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.barra{height:8px;background:var(--acs);border-radius:4px;overflow:hidden;min-width:60px}
+.barra i{display:block;height:100%;background:var(--ac)}
+.nota{font-size:13px;color:var(--mut)}
+[hidden]{display:none!important}
+ul.obs{padding-left:18px}ul.obs li{margin:6px 0}
+</style>
+</head>
+<body>
+<header>
+  <h1>Decano · Facultad de Ciencias y Tecnología</h1>
+  <p class="sub">Claustro Universitario USFX 2026 — mesas, docentes y estudiantes habilitados</p>
+  <span class="reserva">Uso interno · manejar con reserva</span>
+</header>
+<main>
+  <nav role="tablist">
+    <button role="tab" data-t="resumen" aria-selected="true">Resumen</button>
+    <button role="tab" data-t="mesas">Mesas</button>
+    <button role="tab" data-t="estudiantes">Buscar estudiante</button>
+    <button role="tab" data-t="docentes">Docentes</button>
+    <button role="tab" data-t="obs">Observaciones</button>
+  </nav>
+
+  <section id="resumen">
+    <div class="kpis" id="kpis"></div>
+    <h2>Cómo están armadas las mesas</h2>
+    <div class="card">
+      <p>Las mesas de estudiantes van <b>por carrera</b> y, dentro de cada carrera, <b>por apellido en orden alfabético</b>. Eso se ve en el PDF de recintos: las ánforas de Director de Química solo están en las mesas 115–116, y las de Director de Sistemas solo en 118, 119, 120, 125, 126 y 130.</p>
+      <ul class="obs">
+        <li><b>Sistemas, Animación Digital, Ciberseguridad y Computación</b> (1.860 estudiantes): mesas 118 → 119 → 120 → 125 → 126 → 130, de la A a la Z.</li>
+        <li><b>Química Industrial</b> (463): mesa 115 (A–L) y 116 (L–Z).</li>
+        <li><b>Las demás carreras</b> (Industrial, Química, Alimentos, Petróleo, Ambiental, Telecomunicaciones, Biotecnología, etc.): mesas 114, 117, 121, 122, 123, 124, 127, 128 y 129. El padrón oficial no dice la carrera de estos estudiantes, por eso no se puede saber su mesa exacta.</li>
+        <li><b>Docentes</b>: mesa 18 en la Facultad de Tecnología (143) y mesa 21 en Monteagudo (6).</li>
+        <li><b>Provincia Monteagudo</b>: mesa 154 (31 estudiantes).</li>
+      </ul>
+      <p class="nota">Los rangos alfabéticos de Sistemas y Química son aproximados (±5 nombres): se calcularon repartiendo el padrón de Director en orden con la cantidad de cada ánfora. Revisen la lista pegada en la puerta de cada mesa el día de la elección.</p>
+    </div>
+    <h2>Delegados necesarios</h2>
+    <div class="card" id="delegados"></div>
+  </section>
+
+  <section id="mesas" hidden>
+    <div class="card scroll"><table class="tabla" id="tMesas"></table></div>
+  </section>
+
+  <section id="estudiantes" hidden>
+    <div class="filtros">
+      <input id="q" type="search" placeholder="Buscar por apellido o nombre…" autocomplete="off">
+      <select id="fCar"></select>
+      <select id="fMesa"></select>
+      <select id="fOtro"><option value="">Todos</option><option value="o">En 2 facultades</option></select>
+    </div>
+    <div class="letras" id="letras"></div>
+    <p class="nota" id="cuenta"></p>
+    <div class="card scroll"><table class="tabla" id="tEst"></table></div>
+    <p class="nota">Se muestran hasta 400 resultados; escriba más letras para afinar.</p>
+  </section>
+
+  <section id="docentes" hidden>
+    <div class="filtros">
+      <input id="qd" type="search" placeholder="Buscar docente…" autocomplete="off">
+      <select id="fdMesa"><option value="">Todas las mesas</option><option value="18">Mesa 18 · Tecnología</option><option value="21">Mesa 21 · Monteagudo</option></select>
+      <select id="fdVota"><option value="">Votan solo decano o más</option><option value="Director Sistemas">También Director Sistemas</option><option value="Director Química">También Director Química</option></select>
+      <span></span>
+    </div>
+    <p class="nota" id="cuentaD"></p>
+    <div class="card scroll"><table class="tabla" id="tDoc"></table></div>
+    <p class="nota">Las carreras y materias que dicta cada docente salen del Plan de Estudios USFX (cantidad de materias). Para Monteagudo se marcaron 8 docentes probables, pero el PDF dice que votan 6 ahí.</p>
+  </section>
+
+  <section id="obs" hidden>
+    <div class="card" id="obsBox"></div>
+  </section>
+</main>
+<script src="datos.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
